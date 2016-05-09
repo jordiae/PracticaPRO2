@@ -1,0 +1,43 @@
+Cites
+afegir_cita: Jordi
+eliminar_cita: Guillem
+imprimir_cita: Jordi
+imprimir_cites_autor: Guillem
+imprimir_cites_text: Jordi
+imprimir_totes_cites: Guillem
+
+Cjt_autors
+afegir_cita: Jordi
+afegir_text: Guillem
+eliminar_cita: Jordi
+eliminar_text: Guillem
+frases: Jordi
+imprimeix_autor_text: Guillem
+imprimeix_cites_autor: Jordi
+imprimeix_cites_text: Guillem
+imprimeix_contingut_text: Jordi
+imprimeix_info: Guillem
+imprimeix_info_cita: Jordi
+imprimeix_nombre_frases: Guillem
+imprimeix_nombre_paraules: Jordi
+imprimeix_taula_frequencies: Guillem
+imprimeix_totes_cites: Jordi
+imprimeix_tots_autors: Guillem
+imprimeix_tots_textos_autor: Jordi
+seleccionar_text: Guillem
+substituir: Jordi
+
+Text
+afegeix_contingut: Guillem
+comptar_linies: Jordi
+escriure: Guillem
+existeixen_paraules: Jordi
+frases_x_fins_y: Guillem
+imprimeix_frases_expressio: Jordi
+imprimeix_frases_paraules: Guillem
+imprimeix_linies: Jordi
+imprimeix_nombre_frases: Guillem
+imprimeix_nombre_paraules: Jordi
+imprimeix_taula_frequencies: Guillem
+llegir: Jordi
+substituir: Guillem
