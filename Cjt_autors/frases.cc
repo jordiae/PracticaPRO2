@@ -3,14 +3,13 @@
 Cjt_autors::frases() {
 	char c;
 	cin >> c;
-	Text text = *it1;
 	if (c == '(') {
 		string expressio;
 		getline(cin,expressio)
 		expressio += '('; 
 		expressio.pop_back();
 		expressio.pop_back();
-		text.imprimeix_frases_expressio(expressio);
+		(*it1).imprimeix_frases_expressio(expressio);
 	}
 	else {
 		list<string> paraules;
@@ -24,6 +23,6 @@ Cjt_autors::frases() {
 		}
 		paraula.pop_back();
         paraules.insert(iy,paraula);
-		text.imprimeix_frases_paraules(paraules);
+		(*it1).imprimeix_frases_paraules(paraules);
 	}
 }
