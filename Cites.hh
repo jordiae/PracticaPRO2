@@ -49,9 +49,9 @@ public:
 
   // Modificadores
 
-  void afegir_cita(int frase_inicial, int frase_final, vector<string> frases);
+  afegir_cita(int frase_inicial, int frase_final, vector<string> frases, nom_autor, titol_text) 
   /* Pre: cert */
-  /* Post: s'ha afegit una cita al paràmetre implícit */
+  /* Post: s'ha afegit una cita amb les dades passades pels paràmetres al paràmetre implícit */
 
   void eliminar_cita(string referencia);
   /* Pre: referencia és la referència vàlida d'una cita existent */
