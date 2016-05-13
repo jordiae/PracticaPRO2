@@ -1,6 +1,6 @@
 #include "Cjt_autors.hh"
 
-void afegir_cita() {
+void Cjt_autors::afegir_cita() {
 	int frase_inicial;
   	int frase_final;
   	vector<string> frases;
