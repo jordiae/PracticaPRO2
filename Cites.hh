@@ -49,7 +49,7 @@ public:
 
   // Modificadores
 
-  void afegir_cita(int frase_inicial, int frase_final, vector<string> frases, nom_autor, titol_text); 
+  void afegir_cita(int frase_inicial, int frase_final, vector<string> frases, string nom_autor, string titol_text); 
   /* Pre: cert */
   /* Post: s'ha afegit una cita amb les dades passades pels paràmetres al paràmetre implícit */
 
