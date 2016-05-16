@@ -15,7 +15,7 @@ private:
   // Descripció del tipus: representa un text
   // Es poden consultar i modificar les línies del text donat el número d'aquestes
 
-  list<string> linies;
+  vector<string> linies;
 
   /*
     Invariant de la representació:
