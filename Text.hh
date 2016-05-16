@@ -50,7 +50,7 @@ public:
   /* Pre: cert */
   /* Post: retorna el nombre de línies del paràmetre implícit */
 
-  bool existeixen_paraules(set<string> &paraules);
+  bool existeixen_paraules(vector<string> paraules);
   /* Pre: s'ha seleccionat un text */
   /* Post: Es retorna si les paraules es troben al text */
 

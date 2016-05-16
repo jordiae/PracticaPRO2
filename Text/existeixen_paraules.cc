@@ -1,5 +1,5 @@
 #include "Text.hh"
 
-bool Text::existeixen_paraules(set<string> &paraules){
+bool Text::existeixen_paraules(vector<string> paraules){
 
 }
