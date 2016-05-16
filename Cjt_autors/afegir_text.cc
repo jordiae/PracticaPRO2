@@ -1,6 +1,6 @@
 #include "Cjt_autors.hh"
 
-Cjt_autors::afegir_text(){
+void Cjt_autors::afegir_text(){
 	string nom_autor, titol_text, empty;
 	char temp;
 	cin >> temp;

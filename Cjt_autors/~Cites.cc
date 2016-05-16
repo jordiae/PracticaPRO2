@@ -1,1 +1,0 @@
-#include "Cjt_autors.hh"

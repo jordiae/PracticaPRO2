@@ -68,7 +68,7 @@ public:
   /* Pre: hi ha un text al canal d'entrada estàndard */
   /* Post: el paràmetre implícit és igual al text llegit */
 
-  void escriure() const;
+  void escriure();
   /* Pre: cert */
   /* Post: s'ha escrit el text pel canal estàndard de sortida */
 

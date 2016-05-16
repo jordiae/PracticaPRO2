@@ -1,5 +1,5 @@
 #include "Cjt_autors.hh"
 
-Cjt_autors::imprimeix_nombre_paraules() {
-	(*it1).imprimeix_nombre_paraules();
+void Cjt_autors::imprimeix_nombre_paraules() {
+	(*it1).second.imprimeix_nombre_paraules();
 }
