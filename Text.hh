@@ -4,6 +4,7 @@
 #include <vector>
 #include <iostream>
 #include <set>
+#include "Arbre.hh"
 
 using namespace std;
 
