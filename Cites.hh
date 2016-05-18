@@ -2,6 +2,7 @@
 #include <string>
 #include <map>
 #include <vector>
+#include <sstream>
 
 using namespace std;
 
@@ -49,15 +50,15 @@ public:
 
   // Modificadores
 
-  void afegir_cita(int frase_inicial, int frase_final, vector<string> frases);
+  void afegir_cita(int frase_inicial, int frase_final, vector<string> frases, string nom_autor, string titol_text); 
   /* Pre: cert */
-  /* Post: s'ha afegit una cita al paràmetre implícit */
+  /* Post: s'ha afegit una cita amb les dades passades pels paràmetres al paràmetre implícit */
 
   void eliminar_cita(string referencia);
   /* Pre: referencia és la referència vàlida d'una cita existent */
   /* Post: s'ha eliminat la cita amb referència referencia */
 
-  // Consultores
+  // Consultoress
 
   // Lectura i escriptura
 

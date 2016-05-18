@@ -15,7 +15,7 @@ private:
   // Descripció del tipus: representa un text
   // Es poden consultar i modificar les línies del text donat el número d'aquestes
 
-  list<string> linies;
+  vector<string> linies;
 
   /*
     Invariant de la representació:
@@ -50,7 +50,7 @@ public:
   /* Pre: cert */
   /* Post: retorna el nombre de línies del paràmetre implícit */
 
-  bool existeixen_paraules(set<string> &paraules);
+  bool existeixen_paraules(vector<string> paraules);
   /* Pre: s'ha seleccionat un text */
   /* Post: Es retorna si les paraules es troben al text */
 
@@ -68,7 +68,7 @@ public:
   /* Pre: hi ha un text al canal d'entrada estàndard */
   /* Post: el paràmetre implícit és igual al text llegit */
 
-  void escriure() const;
+  void escriure();
   /* Pre: cert */
   /* Post: s'ha escrit el text pel canal estàndard de sortida */
 

@@ -88,5 +88,8 @@ int main() {
       cin;
       cjt_autors.imprimeix_totes_cites();
     }
+    else if ( comanda == "sortir"){
+      return 0;
+    }
   }
 }
