@@ -4,7 +4,6 @@
 #include <vector>
 #include <iostream>
 #include <set>
-#include "Arbre.hh"
 
 using namespace std;
 
@@ -55,8 +54,8 @@ public:
   /* Pre: s'ha seleccionat un text */
   /* Post: Es retorna si les paraules es troben al text */
 
-  bool avalua_frase_expressio(Arbre<string> a, string frase);
-  /* Pre: a és el parseig de l'expressió donada en forma d'arbre*/
+  bool avalua_frase_expressio(string expressio, string frase);
+  /* Pre: expressio és una expressió booleana de paraules vàlida */
   /* Post: retorna si la frase frase compleix l'expressió o no */
 
   // Lectura i escriptura

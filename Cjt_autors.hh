@@ -33,13 +33,6 @@ private:
 		  a cada cita com a clau
   */
 
-
-  Arbre<string> parse(Arbre<string> a, string expressio);
-  /* Pre: a és un arbre buit, expressio és una expressió booleana de paraules vàlida */
-  /* Post: el resultat és un arbe en què cada node descriu la relació entre els fills (&& o ||) i les fulles són les paraules */
-
-
-
 public:
 
   // Constructores
