@@ -33,7 +33,7 @@ comptar_linies: Jordi
 escriure: Guillem
 existeixen_paraules: Jordi
 frases_x_fins_y: Guillem
-imprimeix_frases_expressio: Jordi
+avalua_frase_expressio: Jordi
 imprimeix_frases_paraules: Guillem
 imprimeix_linies: Jordi
 imprimeix_nombre_frases: Guillem

@@ -55,6 +55,10 @@ public:
   /* Pre: s'ha seleccionat un text */
   /* Post: Es retorna si les paraules es troben al text */
 
+  bool avalua_frase_expressio(Arbre<string> a, string frase);
+  /* Pre: a és el parseig de l'expressió donada en forma d'arbre*/
+  /* Post: retorna si la frase frase compleix l'expressió o no */
+
   // Lectura i escriptura
 
   void afegeix_contingut();
@@ -84,10 +88,6 @@ public:
   void imprimeix_taula_frequencies();
   /* Pre: cert */
   /* Post: s'ha imprès pel canal de sortida estàndard les paraules de frases i la seva freqüènca */
-
-  void imprimeix_frases_expressio(string expressio);
-  /* Pre: cert */
-  /* Post: s'han imprès pel canal de sortida els elements de frases que compleixen la regex d'expressió */
 
   void imprimeix_frases_paraules(list<string> &paraules);
   /* Pre: cert */

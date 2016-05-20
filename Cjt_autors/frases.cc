@@ -9,8 +9,15 @@ void Cjt_autors::frases() {
 		expressio += '(';
 		expressio.pop_back();
 		expressio.pop_back();
-		(*it1).second.imprimeix_frases_expressio(expressio);
+		Arbre<string> a;
+		parse(a,expressio);
+		vector<string> frases_a_avaluar = (*it1).second.frases_x_fins_y(0, (*it1).second.comptar_linies());
+		int n = frases_a_avaluar.size();
+		for (int i = 0; i < n; i++)
+			if ((*it1).second.avalua_frase_expressio(a, frases_a_avaluar[i]))
+				void (*it1).imprimeix_linies(i, i);
 	}
+
 	else {
 		list<string> paraules;
 		list<string>::iterator it = paraules.begin();
