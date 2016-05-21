@@ -1,6 +1,6 @@
-#include "Cjt_autors.hh"
+#include "Text.hh"
 
-bool Cjt_autors::avalua_frase_expressio(string expressio, string frase) {
+bool Text::avalua_frase_expressio(string expressio, string frase) {
     int n = expressio.size();
     if (expressio[0] == '{') {
     	int i = 1;
@@ -24,7 +24,7 @@ bool Cjt_autors::avalua_frase_expressio(string expressio, string frase) {
     	int i = 0;
         char op;
         int pos_op;
-    	while (parenthesis_counter != 0;) {
+    	while (parenthesis_counter != 0) {
     		if (expressio[i] == '(')
     			parenthesis_counter++;
     		else if (expressio[i] == ')')
@@ -45,12 +45,11 @@ bool Cjt_autors::avalua_frase_expressio(string expressio, string frase) {
     	for (int j = pos_op+2; j <= i ; j++)
     		expressio_dreta.push_back(expressio[j]);
     	bool be = avalua_frase_expressio(expressio_esquerra,frase);
-		if ((not be and op = '&') or (op == '|' and be))
+		if ((not be and op == '&') or (op == '|' and be))
 		    return be;
-		bool bd = avalua_frase_expressio(expressio_dreta, frase);
-		else if (op == '|' and bd)
+		else if (op == '|' and avalua_frase_expressio(expressio_dreta, frase))
 			return true;
-		else 
+		else
 			return false;
     }
 }

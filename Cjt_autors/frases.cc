@@ -13,7 +13,7 @@ void Cjt_autors::frases() {
 		int n = frases_a_avaluar.size();
 		for (int i = 0; i < n; i++)
 			if ((*it1).second.avalua_frase_expressio(expressio, frases_a_avaluar[i]))
-				void (*it1).imprimeix_linies(i, i);
+				(*it1).second.imprimeix_linies(i, i);
 	}
 
 	else {
