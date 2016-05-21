@@ -4,6 +4,7 @@
 #include <vector>
 #include <iostream>
 #include <set>
+#include <sstream>
 
 using namespace std;
 
@@ -21,6 +22,7 @@ private:
     Invariant de la representació:
     - línies és el conjunt de totes les línies del text
   */
+
 
 public:
 
@@ -42,6 +44,10 @@ public:
 
   // Consultores
 
+  static bool conte_paraula(string text, string paraula);
+  /* Pre: Cert */
+  /* Post: Retorna si el string text conté el string paraula */
+
   vector<string> frases_x_fins_y(int x, int y);
   /* Pre: Cert */
   /* Post: Es retorna un vector que conté les frases x a y */
@@ -50,9 +56,9 @@ public:
   /* Pre: cert */
   /* Post: retorna el nombre de línies del paràmetre implícit */
 
-  bool existeixen_paraules(vector<string> paraules);
+  bool existeix_paraula(string paraula);
   /* Pre: s'ha seleccionat un text */
-  /* Post: Es retorna si les paraules es troben al text */
+  /* Post: Es retorna si la paraula es troba al text */
 
   bool avalua_frase_expressio(string expressio, string frase);
   /* Pre: expressio és una expressió booleana de paraules vàlida */
