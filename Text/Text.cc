@@ -1,5 +1,3 @@
 #include "Text.hh"
 
-Text::Text() {
-
-}
+Text::Text(){}
