@@ -9,6 +9,7 @@ void error() {
 int main() {
   Cjt_autors cjt_autors;
   string comanda;
+  char useless;
   while (comanda != "sortir" and cin >> comanda ) {
     if ( comanda == "afegir"){
       cin >> comanda;
@@ -18,7 +19,7 @@ int main() {
         cjt_autors.afegir_cita();
       }
     else if ( comanda == "triar"){
-      cin;
+      cin >> useless;
       cjt_autors.seleccionar_text();
       }
     else if ( comanda == "eliminar"){
@@ -32,12 +33,12 @@ int main() {
       cjt_autors.substituir();
     }
     else if ( comanda == "textos"){
-      cin;
+      cin >> useless;
       cjt_autors.imprimeix_tots_textos_autor();
     }
     else if ( comanda == "tots"){
       cin >> comanda;
-      cin;
+      cin >> useless;
       if (comanda == "textos")
         cjt_autors.imprimeix_tots_textos();
       else
@@ -51,29 +52,29 @@ int main() {
         cjt_autors.imprimeix_info_cita();
       }
     else if ( comanda == "autor"){
-      cin;
+      cin >> useless;
       cjt_autors.imprimeix_autor_text();
     }
     else if ( comanda == "contingut"){
-      cin;
+      cin >> useless;
       cjt_autors.imprimeix_contingut_text();
     }
     else if ( comanda == "frases"){
       cjt_autors.frases();
     }
     else if ( comanda == "nombre"){
-      cin;
+      cin >> useless;
       cin >> comanda;
-      cin;
+      cin >> useless;
       if (comanda == "frases")
         cjt_autors.imprimeix_nombre_frases();
       else
         cjt_autors.imprimeix_nombre_paraules();
       }
     else if ( comanda == "taula"){
-      cin;
-      cin;
-      cin;
+      cin >> useless;
+      cin >> useless;
+      cin >> useless;
       cjt_autors.imprimeix_taula_frequencies();
     }
     else if ( comanda == "cites"){
@@ -84,8 +85,8 @@ int main() {
         cjt_autors.imprimeix_cites_autor();
     }
     else if ( comanda == "totes"){
-      cin;
-      cin;
+      cin >> useless;
+      cin >> useless;
       cjt_autors.imprimeix_totes_cites();
     }
     else if ( comanda == "sortir"){
