@@ -3,7 +3,7 @@
 void Cjt_autors::seleccionar_text() {
     vector <string> paraules;
     string paraula;
-    while (cin >> paraula && paraula[paraula.size() - 1] != '}'){
+    while (primera_linea >> paraula && paraula[paraula.size() - 1] != '}'){
         paraules.push_back(paraula);
     }
     paraula.erase(paraula.size() - 1, 1);

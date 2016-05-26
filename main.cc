@@ -2,95 +2,13 @@
 
 using namespace std;
 
-void error() {
-  cout << "error" << endl;
-}
-
 int main() {
-  Cjt_autors cjt_autors;
-  string comanda;
-  char useless;
-  while (comanda != "sortir" and cin >> comanda ) {
-    if ( comanda == "afegir"){
-      cin >> comanda;
-      if (comanda == "text")
-        cjt_autors.afegir_text();
-      else
-        cjt_autors.afegir_cita();
-      }
-    else if ( comanda == "triar"){
-      cin >> useless;
-      cjt_autors.seleccionar_text();
-      }
-    else if ( comanda == "eliminar"){
-      cin >> comanda;
-      if (comanda == "text")
-        cjt_autors.eliminar_text();
-      else
-        cjt_autors.eliminar_cita();
-      }
-    else if ( comanda == "substitueix"){
-      cjt_autors.substituir();
+    Cjt_autors cjt_autors;
+    string s;
+    while (getline(cin, s) && s != "sortir"){
+        if (s.size() != 0)
+            cjt_autors.comanda(s);
     }
-    else if ( comanda == "textos"){
-      cin >> useless;
-      cjt_autors.imprimeix_tots_textos_autor();
-    }
-    else if ( comanda == "tots"){
-      cin >> comanda;
-      cin >> useless;
-      if (comanda == "textos")
-        cjt_autors.imprimeix_tots_textos();
-      else
-        cjt_autors.imprimeix_tots_autors();
-      }
-    else if ( comanda == "info"){
-      cin >> comanda;
-      if (comanda == "?")
-        cjt_autors.imprimeix_info();
-      else
-        cjt_autors.imprimeix_info_cita();
-      }
-    else if ( comanda == "autor"){
-      cin >> useless;
-      cjt_autors.imprimeix_autor_text();
-    }
-    else if ( comanda == "contingut"){
-      cin >> useless;
-      cjt_autors.imprimeix_contingut_text();
-    }
-    else if ( comanda == "frases"){
-      cjt_autors.frases();
-    }
-    else if ( comanda == "nombre"){
-      cin >> useless;
-      cin >> comanda;
-      cin >> useless;
-      if (comanda == "frases")
-        cjt_autors.imprimeix_nombre_frases();
-      else
-        cjt_autors.imprimeix_nombre_paraules();
-      }
-    else if ( comanda == "taula"){
-      cin >> useless;
-      cin >> useless;
-      cin >> useless;
-      cjt_autors.imprimeix_taula_frequencies();
-    }
-    else if ( comanda == "cites"){
-      cin >> comanda;
-      if (comanda == "?")
-        cjt_autors.imprimeix_cites_text();
-      else
-        cjt_autors.imprimeix_cites_autor();
-    }
-    else if ( comanda == "totes"){
-      cin >> useless;
-      cin >> useless;
-      cjt_autors.imprimeix_totes_cites();
-    }
-    else if ( comanda == "sortir"){
-      return 0;
-    }
-  }
+    cout << s << endl;
+    return 0;
 }

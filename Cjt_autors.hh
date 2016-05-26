@@ -35,6 +35,10 @@ private:
 
 public:
 
+  stringstream primera_linea;
+
+  void comanda(string comanda);
+
   // Constructores
 
   Cjt_autors();
@@ -68,6 +72,7 @@ public:
 
   // Consultores
 
+  bool hi_ha_seleccio();
 
   // Lectura i escriptura
 
