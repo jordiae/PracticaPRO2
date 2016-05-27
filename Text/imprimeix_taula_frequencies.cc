@@ -1,5 +1,7 @@
 #include "Text.hh"
 
 void Text::imprimeix_taula_frequencies() {
-	cout << "Taula de freqüències" << endl; // només per una prova
+	int n = frequencies.size();
+	for (int i = 0; i < n; i++)
+		cout << frequencies[i].paraula << " " << frequencies[i].freq << endl; 
 }

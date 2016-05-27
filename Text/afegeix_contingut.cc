@@ -35,4 +35,5 @@ void Text::afegeix_contingut() {
     }
     if (linies.size() != 0 && linies[linies.size()-1].size() == 0)
         linies.pop_back();
+    ordenar_frequencies(frequencies);
 }
