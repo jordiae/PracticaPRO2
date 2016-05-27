@@ -2,10 +2,10 @@
 
 void Cjt_autors::frases() {
 	char c;
-	cin >> c;
+	primera_linea >> c;
 	if (c == '(') {
 		string expressio;
-		getline(cin,expressio);
+		getline(primera_linea,expressio);
 		expressio += '(';
 		expressio.pop_back();
 		expressio.pop_back();
@@ -20,11 +20,11 @@ void Cjt_autors::frases() {
 		list<string> paraules;
 		list<string>::iterator it = paraules.begin();
 		string paraula;
-		cin >> paraula;
+		primera_linea >> paraula;
 		while (paraula[paraula.size()-1] != '"') {
 			paraules.insert(it,paraula);
 			++it;
-			cin >> paraula;
+			primera_linea >> paraula;
 		}
 		paraula.pop_back();
         paraules.insert(it,paraula);

@@ -2,6 +2,8 @@
 
 void Cjt_autors::eliminar_cita() {
 	string referencia;
-	cin >> referencia;
+	primera_linea.ignore(10, '"');
+	primera_linea >> referencia;
+	referencia.erase(referencia.size() - 1, 1);
 	cites.eliminar_cita(referencia);
 }

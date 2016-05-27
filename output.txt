@@ -1,0 +1,27 @@
+afegir text "The Picture of Dorian Gray"
+
+afegir text "La ciencia. Su metodo y su filosofia"
+
+tots textos ?
+
+La ciencia. Su metodo y su filosofia
+The Picture of Dorian Gray
+
+info ?
+
+error
+
+triar text {moral beautiful charming}
+
+contingut ?
+
+1 Those who find ugly meanings in beautiful things are corrupt without being charming.
+2 This is a fault.
+3 Those who find beautiful meanings in beautiful things are the cultivated.
+4 For these there is hope.
+5 They are the elect to whom beautiful things mean only Beauty.
+6 There is no such thing as a moral or an immoral book.
+7 Books are well written, or badly written.
+8 That is all.
+
+substitueix "Books" per "Journals"

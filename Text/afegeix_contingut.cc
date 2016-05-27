@@ -20,7 +20,7 @@ void Text::afegeix_contingut() {
         bool found = false;
         while (not found and i < n) {
             if (frequencies[i].paraula == word)
-                found = false;
+                found = true;
             else 
                 i++;
         }

@@ -85,10 +85,6 @@ public:
   /* Pre: 0 <= primera_linia <= ultima_linia <= nombre de linies del paràmetre implícit */
   /* Post: s'han imprès les línies corresponets a la sortida estàndard */
 
-  void llegir();
-  /* Pre: hi ha un text al canal d'entrada estàndard */
-  /* Post: el paràmetre implícit és igual al text llegit */
-
   void escriure();
   /* Pre: cert */
   /* Post: s'ha escrit el text pel canal estàndard de sortida */
