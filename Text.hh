@@ -30,9 +30,9 @@ private:
     - línies és el conjunt de totes les línies del text
   */
 
-  bool comp(const frequencia& a, const frequencia& b);
+  static bool comp(const frequencia& a, const frequencia& b);
 
-  void ordenar_frequencies(vector<frequencia>& freqs);
+  static void ordenar_frequencies(vector<frequencia>& freqs);
 
 
 public:
