@@ -4,6 +4,8 @@ void Cjt_autors::comanda(string comanda){
 
     char useless;
     cout << comanda << endl;
+    if (comanda[comanda.size()-1] == '?')
+        cout << endl;
     primera_linea.str("");
     primera_linea.clear();
     primera_linea << comanda;
