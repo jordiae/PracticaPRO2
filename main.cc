@@ -6,9 +6,11 @@ int main() {
     Cjt_autors cjt_autors;
     string s;
     while (getline(cin, s) && s != "sortir"){
-        if (s.size() != 0)
+        if(s[0] != '\n' and s[0] != '\r' and s.size() != 0){
             cjt_autors.comanda(s);
+            cout << endl;
+        }
     }
-    cout << s << endl;
+    cout << "sortir" << endl;
     return 0;
 }
