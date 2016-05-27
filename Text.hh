@@ -18,6 +18,12 @@ private:
 
   vector<string> linies;
 
+  struct frequencia {
+      string paraula;
+      int freq;
+  };
+
+  vector<frequencia> frequencies;
   /*
     Invariant de la representació:
     - línies és el conjunt de totes les línies del text

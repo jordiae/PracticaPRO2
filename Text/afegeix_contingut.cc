@@ -15,6 +15,23 @@ void Text::afegeix_contingut() {
             linies.push_back("");
             i++;
         }
+        int n = frequencies.size();
+        int i = 0;
+        bool found = false;
+        while (not found and i < n) {
+            if (frequencies[i].paraula == word)
+                found = false;
+            else 
+                i++;
+        }
+        if (found)
+            frequencies[i].freq++;
+        else {
+            frequencia f;
+            f.paraula = word;
+            f.freq = 1;
+            frequencies.push_back(f);
+        }
     }
     if (linies.size() != 0 && linies[linies.size()-1].size() == 0)
         linies.pop_back();
