@@ -12,7 +12,7 @@ bool Text::avalua_frase_expressio(string expressio, string frase) {
         string paraula = "";
         int m = paraules.size();
         int j = 0;
-        bool compleix = false;
+        bool compleix = true;
         while (j < m) {
             if (paraules[i] != 32)
                 paraula += paraules[i];
@@ -23,6 +23,7 @@ bool Text::avalua_frase_expressio(string expressio, string frase) {
             }
             j++;
         }
+        compleix = compleix and Text::conte_paraula(frase, paraula);
         return compleix;
 
     }
