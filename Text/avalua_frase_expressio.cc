@@ -9,15 +9,10 @@ bool Text::avalua_frase_expressio(string expressio, string frase) {
     	    paraula.push_back(expressio[i]);
     	    i++;
     	}
-        int m = linies.size();
-		int j = 0;
-    	bool trobat = false;
-		while (not trobat and j < m) {
-			if (linies[j] == frase)
-				trobat = true;
-			++j;
-		}
-		return trobat;
+        if (frase.find(paraula) != string::npos)
+            return true;
+        else
+            return false;
 	}
     else if (expressio[0] == '(') {
     	int parenthesis_counter = 1;
