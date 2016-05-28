@@ -17,12 +17,12 @@ void Cjt_autors::frases() {
 	else if (pchar == '(') {
 		string expressio;
 		getline(primera_linea,expressio);
-		expressio.erase(expressio.size() - 2, 2); /* I was here */
+		expressio.erase(expressio.size() - 2, 2); // I was here
 		vector<string> frases_a_avaluar = (*it1).second.frases_x_fins_y(1, (*it1).second.comptar_linies());
 		int n = frases_a_avaluar.size();
 		for (int i = 0; i < n; i++){
             if ((*it1).second.avalua_frase_expressio(expressio, frases_a_avaluar[i]))
-				(*it1).second.imprimeix_linies(i, i);
+				(*it1).second.imprimeix_linies(i+1, i+1);
 		}
 	}
 	else {
