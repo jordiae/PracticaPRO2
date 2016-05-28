@@ -4,15 +4,27 @@ bool Text::avalua_frase_expressio(string expressio, string frase) {
     int n = expressio.size();
     if (expressio[0] == '{') {
         int i = 1;
-        string paraula;
+        string paraules;
         while (expressio[i] != '}') {
-            paraula.push_back(expressio[i]);
+            paraules.push_back(expressio[i]);
             i++;
         }
-        if (Text::conte_paraula(frase, paraula))
-            return true;
-        else
-            return false;
+        string paraula = "";
+        int m = paraules.size();
+        int j = 0;
+        bool compleix = false;
+        while (j < m) {
+            if (paraules[i] != 32)
+                paraula += paraules[i];
+            else {
+                if (not Text::conte_paraula(frase, paraula))
+                    compleix = false;
+                paraula = "";
+            }
+            j++;
+        }
+        return compleix;
+
     }
     else if (expressio[0] == '(') {
         int parenthesis_counter = 1;
