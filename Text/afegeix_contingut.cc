@@ -4,6 +4,7 @@ void Text::afegeix_contingut() {
     string word;
     int i = 0;
     while(cin >> word && word[0] != '*'){
+        num_paraules++;
         if (linies.size() == 0)
             linies.push_back("");
         if (linies[i].size() != 0)
@@ -16,16 +17,16 @@ void Text::afegeix_contingut() {
             i++;
         }
         int n = frequencies.size();
-        int i = 0;
+        int j = 0;
         bool found = false;
-        while (not found and i < n) {
-            if (frequencies[i].paraula == word)
+        while (not found and j < n) {
+            if (frequencies[j].paraula == word)
                 found = true;
-            else 
-                i++;
+            else
+                j++;
         }
         if (found)
-            frequencies[i].freq++;
+            frequencies[j].freq++;
         else {
             frequencia f;
             f.paraula = word;
