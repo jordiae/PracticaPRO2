@@ -16,6 +16,8 @@ void Text::afegeix_contingut() {
             linies.push_back("");
             i++;
         }
+        if ( !((last_char >= '0' and last_char <= '9') or (last_char >= 'a' and last_char <= 'z') or (last_char >= 'A' and last_char <= 'Z')))
+            word.pop_back();
         int n = frequencies.size();
         int j = 0;
         bool found = false;
