@@ -10,7 +10,7 @@ void Cjt_autors::frases() {
             cout << "error" << endl;
         else{
             vector<string> frases = (*it1).second.frases_x_fins_y(x, y);
-            for (int i = 0; i < x - y + 1; i++)
+            for (int i = 0; i < (y - x + 1); i++)
                 cout << x + i << " " << frases[i] << endl;
         }
 	}
