@@ -18,6 +18,7 @@ private:
   // Es poden consultar i modificar les línies del text donat el número d'aquestes
 
   vector<string> linies;
+  int num_paraules;
 
   struct frequencia {
       string paraula;

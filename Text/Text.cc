@@ -1,3 +1,5 @@
 #include "Text.hh"
 
-Text::Text(){}
+Text::Text(){
+    num_paraules = 0;
+}
