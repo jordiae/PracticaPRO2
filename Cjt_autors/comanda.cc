@@ -22,7 +22,7 @@ void Cjt_autors::comanda(string comanda){
         }
     }
     else if ( paraula == "triar"){
-        primera_linea >> useless;
+        primera_linea.ignore(10, '{');
         seleccionar_text();
     }
     else if ( paraula == "eliminar"){
