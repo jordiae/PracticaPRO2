@@ -3,18 +3,15 @@ afegir text "The Picture of Dorian Gray"
 afegir text "La ciencia. Su metodo y su filosofia"
 
 tots textos ?
-
-La ciencia. Su metodo y su filosofia
-The Picture of Dorian Gray
+Mario Bunge "La ciencia. Su metodo y su filosofia"
+Oscar Wilde "The Picture of Dorian Gray"
 
 info ?
-
 error
 
 triar text {moral beautiful charming}
 
 contingut ?
-
 1 Those who find ugly meanings in beautiful things are corrupt without being charming.
 2 This is a fault.
 3 Those who find beautiful meanings in beautiful things are the cultivated.
@@ -25,3 +22,175 @@ contingut ?
 8 That is all.
 
 substitueix "Books" per "Journals"
+
+frases 5 7 ?
+5 They are the elect to whom beautiful things mean only Beauty.
+6 There is no such thing as a moral or an immoral book.
+7 Journals are well written, or badly written.
+
+textos autor "Mario Bunge" ?
+"La ciencia. Su metodo y su filosofia"
+
+tots autors ?
+Mario Bunge 1 1 24
+Oscar Wilde 1 8 66
+
+totes cites ?
+
+afegir cita 1 2
+
+info ?
+Oscar Wilde "The Picture of Dorian Gray" 8 66
+Cites Associades:
+OW1
+1 Those who find ugly meanings in beautiful things are corrupt without being charming.
+2 This is a fault.
+
+autor ?
+Oscar Wilde
+
+afegir text "Where the wild things are"
+
+afegir text "Los sistemas de riego antes del siglo X"
+
+afegir text "Que comera la humanidad en el 2050? Reflexiones sobre alimentacion sostenible"
+
+tots textos ?
+Mar Sierra "Que comera la humanidad en el 2050? Reflexiones sobre alimentacion sostenible"
+Mario Bunge "La ciencia. Su metodo y su filosofia"
+Mariona Blay Andreu "Los sistemas de riego antes del siglo X"
+Maurice Sendak "Where the wild things are"
+Oscar Wilde "The Picture of Dorian Gray"
+
+triar text {Saturn moon}
+error
+
+triar text {el una}
+error
+
+triar text {cientifica filosofia hombre}
+error
+
+contingut ?
+error
+
+nombre de frases ?
+error
+
+nombre de paraules ?
+error
+
+taula de frequencies ?
+error
+
+afegir cita 1 1
+error
+
+triar text {eyes another roars}
+error
+
+contingut ?
+error
+
+frases (({night wolf} | {When}) & {And}) ?
+error
+
+frases (({night wolf} | {When}) & {and}) ?
+error
+
+frases ({king} | {roars eyes}) ?
+error
+
+frases (({tamed} | {mischief}) | {king wild}) ?
+error
+
+frases "they terrible" ?
+error
+
+frases "their terrible" ?
+error
+
+afegir cita 2 3
+error
+
+cites ?
+OW1
+1 Those who find ugly meanings in beautiful things are corrupt without being charming.
+2 This is a fault.
+
+eliminar cita "MS1"
+
+cites ?
+OW1
+1 Those who find ugly meanings in beautiful things are corrupt without being charming.
+2 This is a fault.
+
+afegir cita 5 6
+error
+
+afegir cita 1 1
+error
+
+info ?
+error
+
+triar text {agricultura ganaderia bosques}
+error
+
+afegir cita 1 1
+error
+
+triar text {Puquios riego canales}
+error
+
+taula de frequencies ?
+error
+
+afegir cita 1 1
+error
+
+tots autors ?
+Mar Sierra 1 4 89
+Mario Bunge 1 1 24
+Mariona Blay Andreu 1 4 85
+Maurice Sendak 1 6 84
+Oscar Wilde 1 8 66
+
+totes cites ?
+Oscar Wilde
+The Picture of Dorian Gray
+1
+2
+Those who find ugly meanings in beautiful things are corrupt without being charming.This is a fault.
+
+eliminar text
+error
+
+tots autors ?
+Mar Sierra 1 4 89
+Mario Bunge 1 1 24
+Mariona Blay Andreu 1 4 85
+Maurice Sendak 1 6 84
+Oscar Wilde 1 8 66
+
+totes cites ?
+Oscar Wilde
+The Picture of Dorian Gray
+1
+2
+Those who find ugly meanings in beautiful things are corrupt without being charming.This is a fault.
+
+cites autor "Oscar Wilde" ?
+
+info cita "OW1" ?
+Oscar Wilde
+The Picture of Dorian Gray
+1
+2
+Those who find ugly meanings in beautiful things are corrupt without being charming.This is a fault.
+
+eliminar cita "OW1"
+
+totes cites ?
+
+sortir
