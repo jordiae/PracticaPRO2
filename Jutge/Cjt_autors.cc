@@ -194,9 +194,9 @@ void Cjt_autors::frases() {
             if( x > y or x < 1 or y < 1 or x > (*it1).second.comptar_linies() or y > (*it1).second.comptar_linies())
                 cout << "error" << endl;
             else{
-                vector<string> frases = (*it1).second.frases_x_fins_y(x, y);
+                vector<string> fraces = (*it1).second.frases_x_fins_y(x, y);
                 for (int i = 0; i < (y - x + 1); i++)
-                    cout << x + i << " " << frases[i] << endl;
+                    cout << x + i << " " << fraces[i] << endl;
             }
         }
 
