@@ -1,6 +1,23 @@
-#include "Text.hh"
+#include <iostream>
+#include <string>
+#include <sstream>
+using namespace std;
 
-bool Text::avalua_frase_expressio(string expressio, string frase) {
+bool conte_paraula(string text, string paraula){
+    stringstream ss;
+    ss << text;
+    string word;
+    while (ss >> word){
+        char last = word[word.size() - 1];
+        if (! ( (last >= 'a' and last <= 'z') or (last >= 'A' and last <= 'Z') or (last >= '0' and last <= '9') )) //Checks if last char is not a letter or a number
+            word.erase(word.size() - 1, 1);
+        if (paraula == word)
+            return true;
+    }
+    return false;
+}
+
+bool avalua_frase_expressio(string expressio, string frase) {
     int n = expressio.size();
     if (expressio[0] == '{') {
         int i = 1;
@@ -17,13 +34,13 @@ bool Text::avalua_frase_expressio(string expressio, string frase) {
             if (paraules[j] != 32)
                 paraula += paraules[j];
             else {
-                if (not Text::conte_paraula(frase, paraula))
+                if (not conte_paraula(frase, paraula))
                     compleix = false;
                 paraula = "";
             }
             j++;
         }
-        compleix = compleix and Text::conte_paraula(frase, paraula);
+        compleix = compleix and conte_paraula(frase, paraula);
         return compleix;
 
     }
@@ -60,4 +77,14 @@ bool Text::avalua_frase_expressio(string expressio, string frase) {
         else if ((not be and op == '|') or (be and op == '&'))
             return avalua_frase_expressio(expressio_dreta,frase);
     }
+}
+
+int main() {
+    string expressio = "({sampe viti} | {gorge})"; 
+    string frase =  "gorges";
+    if (avalua_frase_expressio(expressio, frase))
+        cout << "TRUE";
+    else
+        cout << "FALSE";
+    cout << endl;
 }

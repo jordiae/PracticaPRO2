@@ -68,6 +68,8 @@ public:
   /* Pre: cert */
   /* Post: retorna el nombre de línies del paràmetre implícit */
 
+  int comptar_paraules();
+
   bool existeix_paraula(string paraula);
   /* Pre: s'ha seleccionat un text */
   /* Post: Es retorna si la paraula es troba al text */

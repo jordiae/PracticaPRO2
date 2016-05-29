@@ -20,8 +20,8 @@ void Cites::afegir_cita(int frase_inicial, int frase_final, vector<string> frase
 
     map<string, int>::iterator i = referencies.find(referencia);
     if (i == referencies.end()) {
-        referencies.insert(make_pair(referencia,0));
-        cites.insert(make_pair(referencia+'0',c));
+        referencies.insert(make_pair(referencia,1)); // era 0
+        cites.insert(make_pair(referencia+'1',c)); // era 0
     }
     else {
         (*i).second++;
