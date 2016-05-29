@@ -37,13 +37,14 @@ void Cjt_autors::seleccionar_text() {
             }
             if (temp and not found){
                 found = true;
+                seleccio = true;
                 it1 = iterator1;
                 it2 = iterator2;
                 iterator1++;
             }else if (temp and found){
                 cout << "error" << endl;
                 error = true;
-                it2 = Mautors.end();
+                seleccio = false;
                 iterator1 = (*iterator2).second.end();
             }else
                 iterator1++;
@@ -56,7 +57,7 @@ void Cjt_autors::seleccionar_text() {
     }
     if (not found){
         cout << "error" << endl;
-        it2 = Mautors.end();
+        seleccio = false;
     }
 
 

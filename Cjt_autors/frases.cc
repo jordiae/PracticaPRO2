@@ -4,15 +4,36 @@ void Cjt_autors::frases() {
 	char pchar = primera_linea.str()[7];
     primera_linea.ignore(1, ' ');
     if (pchar >= '0' and pchar <= '9'){
-        int x, y;
-        primera_linea >> x >> y;
-        if( x > y or x < 1 or y < 1 or x > (*it1).second.comptar_linies() or y > (*it1).second.comptar_linies())
-            cout << "error" << endl;
-        else{
-            vector<string> frases = (*it1).second.frases_x_fins_y(x, y);
-            for (int i = 0; i < (y - x + 1); i++)
-                cout << x + i << " " << frases[i] << endl;
+        string auxx, auxy;
+        bool valid = true;
+        primera_linea >> auxx >> auxy;
+        for (int i = 0; i < auxx.size(); i++){
+            if (not (auxx[i] >= '0' and auxx[i] <= '9'))
+                valid = false;
         }
+        for (int i = 0; i < auxy.size(); i++){
+            if (not (auxy[i] >= '0' and auxy[i] <= '9'))
+                valid = false;
+        }
+        if (valid){
+            int x, y;
+            stringstream ss;
+            ss << auxx;
+            ss >> x;
+            ss.str("");
+            ss.clear();
+            ss << auxy;
+            ss >> y;
+
+            if( x > y or x < 1 or y < 1 or x > (*it1).second.comptar_linies() or y > (*it1).second.comptar_linies())
+                cout << "error" << endl;
+            else{
+                vector<string> frases = (*it1).second.frases_x_fins_y(x, y);
+                for (int i = 0; i < (y - x + 1); i++)
+                    cout << x + i << " " << frases[i] << endl;
+            }
+        }
+
 	}
 	else if (pchar == '(') {
 		string expressio;
@@ -25,7 +46,7 @@ void Cjt_autors::frases() {
 				(*it1).second.imprimeix_linies(i+1, i+1);
 		}
 	}
-	else {
+	else if (pchar == '"'){
 		vector<string> paraules;
 		string paraula;
 		primera_linea.ignore(2, '"');
