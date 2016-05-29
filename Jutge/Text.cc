@@ -61,7 +61,14 @@ bool Text::avalua_frase_expressio(string expressio, string frase) {
 				istringstream frasestream(frase);
 				string a;
 				while(not found and frasestream >> a) {
-                    deformatword(a);
+                    if (a[a.length()-1] == '.' or
+                        a[a.length()-1] == '?' or
+                        a[a.length()-1] == '!' or
+                        a[a.length()-1] == ',' or
+                        a[a.length()-1] == ':' or
+                        a[a.length()-1] == ';'){
+                            a.erase(a.length()-1);
+                        }
 					if (a == s) found = true;
 				}
 				infrase = found;
