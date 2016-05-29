@@ -69,7 +69,8 @@ bool Text::avalua_frase_expressio(string expressio, string frase) {
         return compleix;
 
     }
-    else if (expressio[0] == '(') {
+    //else if (expressio[0] == '(') {
+    else {
         int parenthesis_counter = 1;
         int i = 1;
         char op;
@@ -99,7 +100,8 @@ bool Text::avalua_frase_expressio(string expressio, string frase) {
             return false;
         else if (be and op == '|')
             return true;
-        else if ((not be and op == '|') or (be and op == '&'))
+        //else if ((not be and op == '|') or (be and op == '&'))
+        else
             return avalua_frase_expressio(expressio_dreta,frase);
     }
 }
