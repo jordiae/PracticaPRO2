@@ -89,13 +89,13 @@ void Cjt_autors::comanda(string comanda){
     }
     else if ( paraula == "nombre"){
         if (hi_ha_seleccio()){
-            primera_linea >> useless;
+            primera_linea.ignore(3, 'e');
             primera_linea >> paraula;
-            primera_linea >> useless;
             if (paraula == "frases")
                 imprimeix_nombre_frases();
             else
                 imprimeix_nombre_paraules();
+            cout << endl;
         }
         else
             cout << "error" << endl;
