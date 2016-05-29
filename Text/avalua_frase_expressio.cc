@@ -1,7 +1,6 @@
 #include "Text.hh"
 
 bool Text::avalua_frase_expressio(string expressio, string frase) {
-    int n = expressio.size();
     if (expressio[0] == '{') {
         int i = 1;
         string paraules;

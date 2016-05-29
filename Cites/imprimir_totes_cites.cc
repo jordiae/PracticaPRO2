@@ -1,12 +1,10 @@
 #include "Cites.hh"
 
 void Cites::imprimir_totes_cites() {
-	 map<string, cita>::iterator i;
-	 for (map<string, cita>::iterator i = cites.begin(); i != cites.end(); i++) {
-	 	cout << (*i).second.autor << endl << (*i).second.titol_text << endl << (*i).second.frase_inicial << endl << (*i).second.frase_final << endl;
-	    int n = (*i).second.frases.size();
-	    for (int k = 0; k < n; k++)
-	        cout << (*i).second.frases[k];
-	    cout << endl;
+	 for (map<string, cita>::iterator it = cites.begin(); it != cites.end(); it++) {
+	 	cout << (*it).first << endl;
+	 	for (int i = 0; i < (*it).second.frases.size(); i++)
+            cout << (*it).second.frase_inicial + i << " " << (*it).second.frases[i] << endl;
+        cout << (*it).second.autor << " \"" << (*it).second.titol_text << "\"" << endl;
 	 }
 }

@@ -8,6 +8,8 @@ void Cjt_autors::afegir_text(){
 	cin.ignore(10, '"');
 	getline(cin, nom_autor);
 	nom_autor.erase(nom_autor.size() - 1, 1);
-	Mautors[nom_autor][titol_text].afegeix_contingut();
+	if (Mautors[nom_autor].find(titol_text) != Mautors[nom_autor].end())
+        cout << "error" << endl;
+    else
+        Mautors[nom_autor][titol_text].afegeix_contingut();
 	}
-// cin - > primera_linea ???

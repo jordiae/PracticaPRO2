@@ -11,6 +11,5 @@ int main() {
             cout << endl;
         }
     }
-    cout << "sortir" << endl;
     return 0;
 }
