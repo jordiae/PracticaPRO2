@@ -27,8 +27,6 @@ struct cita {
 
   map<string, cita> cites;
   map<string, int> referencies;
-  map<string, set <string> > cites_autor;
-  map<string, set <string> > cites_text;
 
   /*
     Invariant de la representació:
@@ -61,7 +59,9 @@ public:
   /* Pre: referencia és la referència vàlida d'una cita existent */
   /* Post: s'ha eliminat la cita amb referència referencia */
 
-  // Consultoress
+  // Consultores
+
+  static string inicials_autor(string autor);
 
   // Lectura i escriptura
 
