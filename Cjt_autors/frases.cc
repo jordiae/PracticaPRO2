@@ -17,7 +17,7 @@ void Cjt_autors::frases() {
 	else if (pchar == '(') {
 		string expressio;
 		getline(primera_linea,expressio);
-		expressio.erase(expressio.size() - 2, 2); // I was here
+		expressio.erase(expressio.size() - 2, 2);
 		vector<string> frases_a_avaluar = (*it1).second.frases_x_fins_y(1, (*it1).second.comptar_linies());
 		int n = frases_a_avaluar.size();
 		for (int i = 0; i < n; i++){
@@ -26,18 +26,14 @@ void Cjt_autors::frases() {
 		}
 	}
 	else {
-		list<string> paraules;
-		list<string>::iterator it = paraules.begin();
+		vector<string> paraules;
 		string paraula;
 		primera_linea.ignore(2, '"');
-		primera_linea >> paraula;
-		while (paraula[paraula.size()-1] != '"') {
-			paraules.insert(it,paraula);
-			++it;
-			primera_linea >> paraula;
+		while (primera_linea >> paraula && paraula[paraula.size()-1] != '"'){
+			paraules.push_back(paraula);
 		}
 		paraula.pop_back();
-        paraules.insert(it,paraula);
-		(*it1).second.imprimeix_frases_paraules(paraules);
+        paraules.push_back(paraula);
+        (*it1).second.imprimeix_frases_paraules(paraules);
 	}
 }

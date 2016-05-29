@@ -104,7 +104,7 @@ public:
   /* Pre: cert */
   /* Post: s'ha imprès pel canal de sortida estàndard les paraules de frases i la seva freqüènca */
 
-  void imprimeix_frases_paraules(list<string> &paraules);
+  void imprimeix_frases_paraules(vector<string> &paraules);
   /* Pre: cert */
   /* Post: s'ha imprès pel canal de sortida estàndard els elements de frases que contenen la seqüència paraules */
 

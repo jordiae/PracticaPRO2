@@ -1,22 +1,26 @@
 #include "Text.hh"
 
-void Text::imprimeix_frases_paraules(list<string> &paraules){
+void Text::imprimeix_frases_paraules(vector<string> &paraules){
 	int n = linies.size();
+	stringstream ss;
 	for (int i = 0; i < n; i++) {
 		int m = paraules.size();
-		for (list<string>::iterator j = paraules.begin(); j != paraules.end(); j++) {
-			int p;
-			if (linies[i].find(*j) != string::npos) {
-				p = linies[i].find(*j);
-				int k = p, l = p;
-				while (k != 0 and linies[i][k] != '.')
-					k--;
-				while (linies[i][l] != '.')
-					l++;
-				for (int z = k; z <= l; z++)
-					cout << linies[i][z];
-				cout << endl;
-			}
-		}
+		ss.str("");
+		ss.clear();
+		ss << linies[i];
+        string word;
+        int aux = 0;
+        while (ss >> word and aux != m){
+            char last = word[word.size() - 1];
+            if (! ( (last >= 'a' and last <= 'z') or (last >= 'A' and last <= 'Z') or (last >= '0' and last <= '9') )) //Checks if last char is not a letter or a number
+                word.erase(word.size() - 1, 1);
+            if (paraules[aux] == word)
+                aux++;
+            else
+                aux = 0;
+        }
+		if (aux == m)
+            cout << i+1 << " " << linies[i] << endl;
+
 	}
 }
