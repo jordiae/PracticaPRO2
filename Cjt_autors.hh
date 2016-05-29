@@ -21,6 +21,7 @@ private:
   map<string, Text>::iterator it1;
   map<string, map<string, Text> >::iterator it2;
   Cites cites;
+  bool seleccio;
 
   /*
     Invariant de la representacio:
