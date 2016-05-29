@@ -21,16 +21,17 @@ private:
   map<string, Text>::iterator it1;
   map<string, map<string, Text> >::iterator it2;
   Cites cites;
+  bool seleccio;
 
   /*
     Invariant de la representacio:
-		- Mautors es un diccionari que utilitza el nom de l'autor com a clau i un diccionari
-		  associat a cadascuna d'elles. Aquest conté els textos de cada autor amb el titol del
-		  text com a clau i un objecte Text associat a cadascun d'aquests
+    - Mautors es un diccionari que utilitza el nom de l'autor com a clau i un diccionari
+      associat a cadascuna d'elles. Aquest conté els textos de cada autor amb el titol del
+      text com a clau i un objecte Text associat a cadascun d'aquests
         - it1 és un iterator per a l'ultim text seleccionat
-		- it2 és un iterator per a l'autor de l'ultim text seleccionat
-		- cites és un diccionari on es guarden cites, utilitzant una referència única
-		  a cada cita com a clau
+    - it2 és un iterator per a l'autor de l'ultim text seleccionat
+    - cites és un diccionari on es guarden cites, utilitzant una referència única
+      a cada cita com a clau
   */
 
 public:
