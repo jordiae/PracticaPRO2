@@ -6,13 +6,13 @@ Cjt_autors::Cjt_autors() {
 void Cjt_autors::afegir_cita() {
 	int frase_inicial;
   	int frase_final;
-  	vector<string> frases;
+  	vector<string> frasess;
     primera_linea >> frase_inicial >> frase_final;
     if( frase_inicial > frase_final or frase_inicial < 1 or frase_final < 1 or frase_inicial > (*it1).second.comptar_linies() or frase_final > (*it1).second.comptar_linies())
         cout << "error" << endl;
     else{
-        frases = (*it1).second.frases_x_fins_y(frase_inicial, frase_final);
-        cites.afegir_cita(frase_inicial, frase_final, frases, (*it2).first, (*it1).first);
+        frasess = (*it1).second.frases_x_fins_y(frase_inicial, frase_final);
+        cites.afegir_cita(frase_inicial, frase_final, frasess, (*it2).first, (*it1).first);
     }
 }
 
@@ -30,13 +30,13 @@ void Cjt_autors::afegir_text(){
         Mautors[nom_autor][titol_text].afegeix_contingut();
 	}
 
-void Cjt_autors::comanda(string comanda){
+void Cjt_autors::comanda(string comande){
 
     char useless;
-    cout << comanda << endl;
+    cout << comande << endl;
     primera_linea.str("");
     primera_linea.clear();
-    primera_linea << comanda;
+    primera_linea << comande;
     string paraula;
     primera_linea >> paraula;
     if ( paraula == "afegir"){
@@ -175,9 +175,9 @@ void Cjt_autors::frases() {
         if( x > y or x < 1 or y < 1 or x > (*it1).second.comptar_linies() or y > (*it1).second.comptar_linies())
             cout << "error" << endl;
         else{
-            vector<string> frases = (*it1).second.frases_x_fins_y(x, y);
+            vector<string> fraseses = (*it1).second.frases_x_fins_y(x, y);
             for (int i = 0; i < (y - x + 1); i++)
-                cout << x + i << " " << frases[i] << endl;
+                cout << x + i << " " << fraseses[i] << endl;
         }
 	}
 	else if (pchar == '(') {
