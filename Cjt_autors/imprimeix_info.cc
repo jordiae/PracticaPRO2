@@ -6,5 +6,5 @@ void Cjt_autors::imprimeix_info() {
     cout << " ";
     (*it1).second.imprimeix_nombre_paraules();
     cout << endl << "Cites Associades:" << endl;
-    cites.imprimir_cites_text((*it1).first);
+    cites.imprimir_cites_associades((*it1).first);
 }

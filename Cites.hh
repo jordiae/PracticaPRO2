@@ -77,6 +77,10 @@ public:
   /* Pre: cert */
   /* Post: s'han imprès totes les cites del text amb títol titol_text */
 
+  void imprimir_cites_associades(string titol_text);
+  /* Pre: cert */
+  /* Post: s'han imprès totes les cites del text amb títol titol_text sense el nom de l'autor o el titol del text al final */
+
   void imprimir_totes_cites();
   /* Pre: cert */
   /* Post: s'han imprès totes les cites pel canal estàndard de sortida */
