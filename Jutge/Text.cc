@@ -44,89 +44,7 @@ void Text::afegeix_contingut() {
     ordenar_frequencies(frequencies);
 }
 bool Text::avalua_frase_expressio(string expressio, string frase) {
-   if (expressio[0] == '{') {
-        istringstream iss (expressio);
-        string s;
-		bool end = false;
-		bool infrase = true;
-		while (not end and iss >> s) {
-			if (s[0] == '{') s = s.substr(1);
-			if (s[s.length()-1] == '}') {
-				s.erase(s.length()-1);
-				end = true;
-			}
-			//cout << "Paraula s: " << s << endl;
-			if (infrase) {
-				bool found = false;
-				istringstream frasestream(frase);
-				string a;
-				while(not found and frasestream >> a) {
-                    if (a[a.length()-1] == '.' or
-                        a[a.length()-1] == '?' or
-                        a[a.length()-1] == '!' or
-                        a[a.length()-1] == ',' or
-                        a[a.length()-1] == ':' or
-                        a[a.length()-1] == ';'){
-                            a.erase(a.length()-1);
-                        }
-					if (a == s) found = true;
-				}
-				infrase = found;
-				//if (found) cout << s << " trobada." << endl;
-				//else cout << s << " no trobada." << endl;
-			}
-		}
-		if (infrase) {
-            //cout << "Expressio " << exp << " trobada." << endl;
-            return true;
-        }
-		else {
-            //cout << "Expressio " << exp << " no trobada." << endl;
-            return false;
-        }
-	} else if (expressio[0] == '('){
-        char c = expressio[1]; //pot ser ( o {
-        int counter = 1;
-        int i=2;
-        char ci;
-        if (c == '(') ci = ')';
-        else if (c == '{') ci = '}';
-        else cout << "error expected (, { got " << c << endl;
-        while(counter != 0 and i < expressio.length()){
-            if (expressio[i] == c) counter++;
-            else if (expressio[i] == ci) counter--;
-            i++;
-        }
-        if(i == expressio.length()) {
-            //cout << "error, end of string" << endl;
-            return false;
-        }
-        // i es el tanco subexpressio +1
-        string expesquerra = expressio.substr(1, i-1);
-        //cout << "ANALITZANT EXP ESQ: " << expesquerra << endl;
-
-        char op = expressio[i+1];
-        c = expressio[i+3]; //pot ser ( o {
-        counter = 1;
-        int in = i+3;
-        i= i+4;
-        if (c == '(') ci = ')';
-        else if (c == '{') ci = '}';
-        else cout << "error expected (, { got " << c << endl;
-        while(counter != 0 and i < expressio.length()){
-            if (expressio[i] == c) counter++;
-            else if (expressio[i] == ci) counter--;
-            i++;
-        }
-        if(i == expressio.length()) {cout << "error, end of string" << endl; return false;}
-        string expdreta = expressio.substr(in, i-in);
-        //cout << "ANALITZANT EXP DRE: " << expdreta << endl;
-        if (op == '&') return avalua_frase_expressio(expesquerra, frase) and avalua_frase_expressio(expdreta, frase);
-        else if (op == '|') return avalua_frase_expressio(expesquerra, frase) or avalua_frase_expressio(expdreta, frase);
-    }
-	return false;
-
-   /* if (expressio[0] == '{') {
+    if (expressio[0] == '{') {
         int i = 1;
         string paraules;
         while (expressio[i] != '}') {
@@ -151,8 +69,7 @@ bool Text::avalua_frase_expressio(string expressio, string frase) {
         return compleix;
 
     }
-    //else if (expressio[0] == '(') {
-    else {
+    else if (expressio[0] == '(') {
         int parenthesis_counter = 1;
         int i = 1;
         char op;
@@ -182,11 +99,14 @@ bool Text::avalua_frase_expressio(string expressio, string frase) {
             return false;
         else if (be and op == '|')
             return true;
-        //else if ((not be and op == '|') or (be and op == '&'))
-        else
+        else if ((not be and op == '|') or (be and op == '&'))
             return avalua_frase_expressio(expressio_dreta,frase);
+        else
+            return false;
+        
     }
-    */
+    else
+        return false;
 }
 bool Text::comp(const frequencia& a, const frequencia& b) {
 	if (a.freq != b.freq)
@@ -214,6 +134,7 @@ bool Text::conte_paraula(string text, string paraula){
             return true;
     }
     return false;
+
 }
 void Text::escriure(){
     for (int i = 0; i < linies.size(); i++){
