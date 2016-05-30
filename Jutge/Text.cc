@@ -1,3 +1,4 @@
+
 #include "Text.hh"
 
 Text::Text(){
@@ -136,18 +137,18 @@ bool Text::avalua_frase_expressio(string expressio, string frase) {
     }
 }
 bool Text::comp(const frequencia& a, const frequencia& b) {
-	if (a.freq != b.freq)
-		return a.freq > b.freq;
+    if (a.freq != b.freq)
+        return a.freq > b.freq;
     else if (a.paraula.size() != b.paraula.size())
             return a.paraula.size() < b.paraula.size();
     else
         return a.paraula < b.paraula;
 }
 int Text::comptar_linies() {
-	return linies.size();
+    return linies.size();
 }
 int Text::comptar_paraules() {
-	return num_paraules;
+    return num_paraules;
 }
 bool Text::conte_paraula(string text, string paraula){
     stringstream ss;
@@ -176,19 +177,19 @@ bool Text::existeix_paraula(string paraula){
     return false;
 }
 vector<string> Text::frases_x_fins_y(int x, int y) {
-	vector<string> frases;
-	for (int i = x-1; i <= y-1; i++)
-		frases.push_back(linies[i]);
-	return frases;
+    vector<string> frases;
+    for (int i = x-1; i <= y-1; i++)
+        frases.push_back(linies[i]);
+    return frases;
 }
 void Text::imprimeix_frases_paraules(vector<string> &paraules){
-	int n = linies.size();
-	stringstream ss;
-	for (int i = 0; i < n; i++) {
-		int m = paraules.size();
-		ss.str("");
-		ss.clear();
-		ss << linies[i];
+    int n = linies.size();
+    stringstream ss;
+    for (int i = 0; i < n; i++) {
+        int m = paraules.size();
+        ss.str("");
+        ss.clear();
+        ss << linies[i];
         string word;
         int aux = 0;
         while (ss >> word and aux != m){
@@ -200,14 +201,14 @@ void Text::imprimeix_frases_paraules(vector<string> &paraules){
             else
                 aux = 0;
         }
-		if (aux == m)
+        if (aux == m)
             cout << i+1 << " " << linies[i] << endl;
 
-	}
+    }
 }
 void Text::imprimeix_linies(int primera_linia, int ultima_linia){
-	for (int i = primera_linia-1; i <= ultima_linia-1; i++)
-		cout << i+1 << " " << linies[i] << endl;
+    for (int i = primera_linia-1; i <= ultima_linia-1; i++)
+        cout << i+1 << " " << linies[i] << endl;
 }
 void Text::imprimeix_nombre_frases(){
     cout << linies.size();
@@ -216,13 +217,13 @@ void Text::imprimeix_nombre_paraules() {
    cout << num_paraules;
 }
 void Text::imprimeix_taula_frequencies() {
-	int n = frequencies.size();
-	for (int i = 0; i < n; i++)
-		cout << frequencies[i].paraula << " " << frequencies[i].freq << endl;
+    int n = frequencies.size();
+    for (int i = 0; i < n; i++)
+        cout << frequencies[i].paraula << " " << frequencies[i].freq << endl;
 }
 void Text::ordenar_frequencies(vector<frequencia>& freqs) {
     sort(freqs.begin(), freqs.end(), comp);
-    while (freqs[freqs.size() - 1].freq == 0)
+    while (freqs.size() > 0 and freqs[freqs.size() - 1].freq == 0)
         freqs.pop_back();
 }
 void Text::substituir(string paraula_a_substituir, string paraula_que_substitueix) {
