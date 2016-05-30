@@ -120,7 +120,7 @@ void Cjt_autors::comanda(string comande){
     }
     else if ( paraula == "info"){
         primera_linea >> paraula;
-        if (paraula == "?"){ 
+        if (paraula == "?"){
             if (hi_ha_seleccio())
                 imprimeix_info();
             else
@@ -163,7 +163,7 @@ void Cjt_autors::comanda(string comande){
         }
         else
             cout << "error" << endl;
-    } 
+    }
     else if ( paraula == "taula"){
         if (hi_ha_seleccio()){
             primera_linea >> useless;
@@ -184,7 +184,7 @@ void Cjt_autors::comanda(string comande){
         }
         else
             imprimeix_cites_autor();
-    } 
+    }
     else if ( paraula == "totes"){
         primera_linea >> useless;
         primera_linea >> useless;
@@ -243,6 +243,7 @@ void Cjt_autors::frases() {
         string expressio;
         getline(primera_linea,expressio);
         expressio.erase(expressio.size() - 2, 2);
+        expressio = Text::normalitza(expressio);
         vector<string> frases_a_avaluar = (*it1).second.frases_x_fins_y(1, (*it1).second.comptar_linies());
         int n = frases_a_avaluar.size();
         for (int i = 0; i < n; i++){
@@ -252,7 +253,7 @@ void Cjt_autors::frases() {
             expression = "(" + expression;
             istringstream iss2(expression);
             while (iss2 >> estandaritzador) {
-                est += estandaritzador + " "; 
+                est += estandaritzador + " ";
             }
             est.pop_back();*/
             /*string s = frases_a_avaluar[i];

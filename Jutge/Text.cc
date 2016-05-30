@@ -3,6 +3,30 @@
 Text::Text(){
     num_paraules = 0;
 }
+
+string Text::normalitza (string expressio){
+    string normalitzat;
+    for (int i = 0; i < expressio.size()-1; i++){
+        char c = expressio[i];
+        if (c == '|' or c == '&'){
+            normalitzat += " ";
+            normalitzat += c;
+            normalitzat += " ";
+        }
+        else if (c != ' ')
+            normalitzat += c;
+        else if(((expressio[i+1] >= 'a' and expressio[i+1] <= 'z') or (expressio[i+1] >= 'A' and expressio[i+1] <= 'Z')) and normalitzat[normalitzat.size()-1] != '{'){
+            normalitzat += c;
+        }
+    }
+    char c = expressio[expressio.size()-1];
+    if (c != ' ')
+        normalitzat += c;
+    return normalitzat;
+}
+
+
+
 void Text::afegeix_contingut() {
     string word;
     int i = 0;
@@ -103,7 +127,7 @@ bool Text::avalua_frase_expressio(string expressio, string frase) {
             return avalua_frase_expressio(expressio_dreta,frase);
         else
             return false;
-        
+
     }
     else {
         //expressio.erase(expressio[0],1);
