@@ -16,6 +16,9 @@ Cjt_autors.o: Cjt_autors.cc
 Text.o: Text.cc
 	$(CXX) -c $^ $(OPTIONS)
 
+tar: 
+	tar -cvf practica.tar *.cc *.hh Makefile
+
 clean:
 	rm *.o
 	rm *.tar
