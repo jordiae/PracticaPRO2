@@ -4,16 +4,47 @@ Cjt_autors::Cjt_autors() {
     seleccio = false;
 }
 void Cjt_autors::afegir_cita() {
-	int frase_inicial;
-  	int frase_final;
+//	int frase_inicial;
+ // 	int frase_final;
   	vector<string> frasess;
-    primera_linea >> frase_inicial >> frase_final;
-    if( frase_inicial > frase_final or frase_inicial < 1 or frase_final < 1 or frase_inicial > (*it1).second.comptar_linies() or frase_final > (*it1).second.comptar_linies())
+//    primera_linea >> frase_inicial >> frase_final;
+
+     string auxx, auxy;
+     bool valid = true;
+     primera_linea >> auxx >> auxy;
+     for (int i = 0; i < auxx.size(); i++){
+         if (not (auxx[i] >= '0' and auxx[i] <= '9'))
+             valid = false;
+    }
+     for (int i = 0; i < auxy.size(); i++){
+         if (not (auxy[i] >= '0' and auxy[i] <= '9'))
+             valid = false;
+     }
+    if (valid){
+        int x, y;
+        stringstream ss;
+        ss << auxx;
+        ss >> x;
+        ss.str("");
+        ss.clear();
+        ss << auxy;
+        ss >> y;
+
+        if( x > y or x < 1 or y < 1 or x > (*it1).second.comptar_linies() or y > (*it1).second.comptar_linies())
+            cout << "error" << endl;
+        else{
+            frasess = (*it1).second.frases_x_fins_y(x, y);
+            cites.afegir_cita(x, y, frasess, (*it2).first, (*it1).first);
+         }
+    }
+
+
+/*    if( frase_inicial > frase_final or frase_inicial < 1 or frase_final < 1 or frase_inicial > (*it1).second.comptar_linies() or frase_final > (*it1).second.comptar_linies())
         cout << "error" << endl;
     else{
         frasess = (*it1).second.frases_x_fins_y(frase_inicial, frase_final);
         cites.afegir_cita(frase_inicial, frase_final, frasess, (*it2).first, (*it1).first);
-    }
+    } */
 }
 
 void Cjt_autors::afegir_text(){
@@ -89,7 +120,7 @@ void Cjt_autors::comanda(string comande){
     }
     else if ( paraula == "info"){
         primera_linea >> paraula;
-        if (paraula == "?"){
+        if (paraula == "?"){ 
             if (hi_ha_seleccio())
                 imprimeix_info();
             else
@@ -132,7 +163,7 @@ void Cjt_autors::comanda(string comande){
         }
         else
             cout << "error" << endl;
-    }
+    } 
     else if ( paraula == "taula"){
         if (hi_ha_seleccio()){
             primera_linea >> useless;
@@ -145,11 +176,15 @@ void Cjt_autors::comanda(string comande){
     }
     else if ( paraula == "cites"){
         primera_linea >> paraula;
-        if (paraula == "?")
-            imprimeix_cites_text();
+        if (paraula == "?"){
+            if (hi_ha_seleccio())
+                imprimeix_cites_text();
+            else
+                cout << "error" << endl;
+        }
         else
             imprimeix_cites_autor();
-    }
+    } 
     else if ( paraula == "totes"){
         primera_linea >> useless;
         primera_linea >> useless;
@@ -211,6 +246,22 @@ void Cjt_autors::frases() {
         vector<string> frases_a_avaluar = (*it1).second.frases_x_fins_y(1, (*it1).second.comptar_linies());
         int n = frases_a_avaluar.size();
         for (int i = 0; i < n; i++){
+            /*string expression = frases_a_avaluar[i];
+            string estandaritzador;
+            string est = "";
+            expression = "(" + expression;
+            istringstream iss2(expression);
+            while (iss2 >> estandaritzador) {
+                est += estandaritzador + " "; 
+            }
+            est.pop_back();*/
+            /*string s = frases_a_avaluar[i];
+            int j = 0;
+            while (s[j] != '{') {
+                if (s[j] == ' ')
+                    s.erase(j);
+                ++j;
+            }*/
             if ((*it1).second.avalua_frase_expressio(expressio, frases_a_avaluar[i]))
                 (*it1).second.imprimeix_linies(i+1, i+1);
         }

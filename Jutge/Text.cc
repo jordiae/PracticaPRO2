@@ -105,8 +105,11 @@ bool Text::avalua_frase_expressio(string expressio, string frase) {
             return false;
         
     }
-    else
+    else {
+        //expressio.erase(expressio[0],1);
+        //return avalua_frase_expressio(expressio, frase);
         return false;
+    }
 }
 bool Text::comp(const frequencia& a, const frequencia& b) {
 	if (a.freq != b.freq)
@@ -208,24 +211,62 @@ void Text::substituir(string paraula_a_substituir, string paraula_que_substituei
             p2_pos = i;
     }
 
+
     if (p1_pos != -1 and p1_pos != p2_pos){
         int n = linies.size();
         for (int i = 0; i < n; i++) {
-            int pos = linies[i].find(paraula_a_substituir);
-            while (pos != -1){
-                linies[i].replace(pos, paraula_a_substituir.length(), paraula_que_substitueix);
-                pos = linies[i].find(paraula_a_substituir);
+
+            string Frase = "";
+            bool first = true;
+            bool signe = false;
+            stringstream ss;
+            ss.str("");
+            ss.clear();
+            ss << linies[i];
+            string word;
+            while (ss >> word){
+                signe = false;
+
+                if (not first){
+                    Frase += " ";
+                }
+                else
+                    first = false;
+                char last = word[word.size() - 1];
+                if (! ( (last >= 'a' and last <= 'z') or (last >= 'A' and last <= 'Z') or (last >= '0' and last <= '9') )){ //Checks if last char is not a letter or a number
+                    word.erase(word.size() - 1, 1);
+                    signe = true;
+                }
+
+                if (paraula_a_substituir == word){
+                    if (signe){
+                        Frase += paraula_que_substitueix + last;
+                    }
+                    else{
+                        Frase += paraula_que_substitueix;
+                    }
+
+                }
+                else{
+                    if (signe){
+                        Frase += word + last;
+                    }
+                    else{
+                        Frase += word;
+                    }
+                }
             }
+            linies[i] = Frase;
         }
-        if (p2_pos != -1){
-            frequencies[p2_pos].freq += frequencies[p1_pos].freq;
-            frequencies[p1_pos].freq = 0;
-        }
-        else{
-            frequencies[p1_pos].paraula = paraula_que_substitueix;
-        }
-        ordenar_frequencies(frequencies);
     }
+    if (p2_pos != -1){
+        frequencies[p2_pos].freq += frequencies[p1_pos].freq;
+            frequencies[p1_pos].freq = 0;
+    }
+    else{
+        frequencies[p1_pos].paraula = paraula_que_substitueix;
+    }
+    ordenar_frequencies(frequencies);
 
 }
 Text::~Text() {
