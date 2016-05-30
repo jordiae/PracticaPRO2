@@ -1,4 +1,3 @@
-
 #include "Text.hh"
 
 Text::Text(){
@@ -284,12 +283,14 @@ void Text::substituir(string paraula_a_substituir, string paraula_que_substituei
             linies[i] = Frase;
         }
     }
-    if (p2_pos != -1){
-        frequencies[p2_pos].freq += frequencies[p1_pos].freq;
-            frequencies[p1_pos].freq = 0;
-    }
-    else{
-        frequencies[p1_pos].paraula = paraula_que_substitueix;
+    if (frequencies.size() > 0) {
+        if (p2_pos != -1){
+            frequencies[p2_pos].freq += frequencies[p1_pos].freq;
+                frequencies[p1_pos].freq = 0;
+        }
+        else{
+            frequencies[p1_pos].paraula = paraula_que_substitueix;
+        }
     }
     ordenar_frequencies(frequencies);
 
