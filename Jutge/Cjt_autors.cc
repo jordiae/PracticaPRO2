@@ -26,8 +26,7 @@ void Cjt_autors::afegir_text(){
 	nom_autor.erase(nom_autor.size() - 1, 1);
 	if (Mautors[nom_autor].find(titol_text) != Mautors[nom_autor].end()){
 		cout << "error" << endl;
-		string word;
-		while (cin >> word && word[0] != '*'){}
+		
 	}
         else
         Mautors[nom_autor][titol_text].afegeix_contingut();
