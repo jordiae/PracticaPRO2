@@ -447,7 +447,8 @@ void Cjt_autors::substituir() {
     primera_linea.ignore(10, '"');
     primera_linea >> paraula_que_substitueix;
     paraula_que_substitueix.erase(paraula_que_substitueix.size() - 1, 1);
-    (*it1).second.substituir(paraula_a_substituir,paraula_que_substitueix);
+    if (paraula_a_substituir != paraula_que_substitueix)
+        (*it1).second.substituir(paraula_a_substituir,paraula_que_substitueix);
 }
 
 Cjt_autors::~Cjt_autors() {

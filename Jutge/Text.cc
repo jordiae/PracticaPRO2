@@ -297,7 +297,7 @@ void Text::substituir(string paraula_a_substituir, string paraula_que_substituei
         }
     }
 
-     string s = paraula_que_substitueix;
+     /*string s = paraula_que_substitueix;
     bool empty = true;
     while (empty and s.size() > 0) {
         if (s[s.size()-1] != ' ')
@@ -317,8 +317,8 @@ void Text::substituir(string paraula_a_substituir, string paraula_que_substituei
             else 
                 frequencies[p1_pos].freq = 0;
         }
-    }
-    /*
+    }*/
+    
     if (p1_pos != -1 and p2_pos != -1){
         frequencies[p2_pos].freq += frequencies[p1_pos].freq;
             frequencies[p1_pos].freq = 0;
@@ -329,7 +329,7 @@ void Text::substituir(string paraula_a_substituir, string paraula_que_substituei
         else
             frequencies[p1_pos].freq = 0;
     }
-    ordenar_frequencies(frequencies);*/
+    ordenar_frequencies(frequencies);
 
 }
 Text::~Text() {
