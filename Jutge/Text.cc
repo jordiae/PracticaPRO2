@@ -283,7 +283,58 @@ void Text::substituir(string paraula_a_substituir, string paraula_que_substituei
             linies[i] = Frase;
         }
     }
+
+
+
+
+    /*string s = paraula_que_substitueix;
+    stringstream ss;
+    ss << s;
+    bool empty = false;
+    while (ss >> s)
+        if (s == "")
+            empty = true;
+    if (empty)
+        cout << "empty";
     if (frequencies.size() > 0) {
+        if (p2_pos != -1){
+            if (not empty)
+                frequencies[p2_pos].freq += frequencies[p1_pos].freq;
+            else
+                frequencies[p2_pos].freq = 0;
+            frequencies[p1_pos].freq = 0;
+        }
+        else{
+            frequencies[p1_pos].paraula = paraula_que_substitueix;
+        }
+    }*/
+    string s = paraula_que_substitueix;
+    bool empty = true;
+    while (empty and s.size() > 0) {
+        if (s[s.size()-1] != ' ')
+            empty = false;
+        s.pop_back();
+    }
+    if (empty)
+        if (frequencies.size() > 0) {
+        if (p2_pos != -1){
+            if (not empty)
+                frequencies[p2_pos].freq += frequencies[p1_pos].freq;
+                frequencies[p1_pos].freq = 0;
+        }
+        else{
+            if (not empty)
+                frequencies[p1_pos].paraula = paraula_que_substitueix;
+            else 
+                frequencies[p1_pos].freq = 0;
+        }
+    }
+
+
+
+    
+
+    /*if (frequencies.size() > 0) {
         if (p2_pos != -1){
             frequencies[p2_pos].freq += frequencies[p1_pos].freq;
                 frequencies[p1_pos].freq = 0;
@@ -291,7 +342,7 @@ void Text::substituir(string paraula_a_substituir, string paraula_que_substituei
         else{
             frequencies[p1_pos].paraula = paraula_que_substitueix;
         }
-    }
+    }*/
     ordenar_frequencies(frequencies);
 
 }
