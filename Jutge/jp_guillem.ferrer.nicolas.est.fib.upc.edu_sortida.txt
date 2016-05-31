@@ -1,0 +1,436 @@
+afegir text "Don't bother sending a tech, I'll be dead by then"
+
+triar text {have lots desk}
+
+autor ?
+guitarsdontdance
+
+contingut ?
+1 In a 30k organization, lots of people go on vacay, and some of them (let's say 20) remembered to set their email to auto-respond about their absence.
+2 And the auto-responders responded to the same recipients - including all-employees@org.edu.
+3 So, every "I don't care about your apartment" message didn't just generate 30,000 copies of itself.
+4 That wasn't the real problem.
+5 That incident might've simmered down after people stopped responding.
+6 The IT staff busied themselves with mucking out the mailboxes from these millions of messages and deactivating the auto-responders.
+7 They brought the email system back online, and their first order of business was to send out an email explaining the cause of the problem, etc.
+8 And they addressed the notification email.
+9 Before they sent their email message, they had disabled most of the auto-responders - but they missed at least one.
+10 they missed at least two.
+11 This the greatest punchline this story could have.
+12 If you need help with anything administrative, please contact Bob.
+13 If Bob is unavailable, please have your message printed and put on my desk for when I get back.
+
+frases "your message" ?
+13 If Bob is unavailable, please have your message printed and put on my desk for when I get back.
+
+frases 4 8 ?
+4 That wasn't the real problem.
+5 That incident might've simmered down after people stopped responding.
+6 The IT staff busied themselves with mucking out the mailboxes from these millions of messages and deactivating the auto-responders.
+7 They brought the email system back online, and their first order of business was to send out an email explaining the cause of the problem, etc.
+8 And they addressed the notification email.
+
+frases (({Bob} & {get}) | {email}) ?
+1 In a 30k organization, lots of people go on vacay, and some of them (let's say 20) remembered to set their email to auto-respond about their absence.
+7 They brought the email system back online, and their first order of business was to send out an email explaining the cause of the problem, etc.
+8 And they addressed the notification email.
+9 Before they sent their email message, they had disabled most of the auto-responders - but they missed at least one.
+13 If Bob is unavailable, please have your message printed and put on my desk for when I get back.
+
+taula de frequencies ?
+the 11
+of 7
+they 5
+email 5
+to 4
+and 4
+their 4
+message 3
+auto-responders 3
+ 2
+If 2
+at 2
+on 2
+And 2
+Bob 2
+out 2
+That 2
+back 2
+have 2
+with 2
+your 2
+about 2
+least 2
+missed 2
+people 2
+please 2
+problem 2
+I 1
+a 1
+"I 1
+20 1
+IT 1
+In 1
+So 1
+an 1
+go 1
+is 1
+my 1
+30k 1
+The 1
+but 1
+etc 1
+for 1
+get 1
+had 1
+one 1
+put 1
+say 1
+set 1
+two 1
+was 1
+you 1
+They 1
+This 1
+care 1
+desk 1
+down 1
+from 1
+help 1
+just 1
+lots 1
+most 1
+need 1
+real 1
+same 1
+send 1
+sent 1
+some 1
+them 1
+this 1
+when 1
+after 1
+cause 1
+could 1
+don't 1
+every 1
+first 1
+order 1
+staff 1
+story 1
+these 1
+vacay 1
+(let's 1
+30,000 1
+Before 1
+busied 1
+copies 1
+didn't 1
+itself 1
+online 1
+system 1
+wasn't 1
+absence 1
+brought 1
+contact 1
+mucking 1
+printed 1
+stopped 1
+anything 1
+business 1
+disabled 1
+generate 1
+greatest 1
+incident 1
+messages 1
+might've 1
+millions 1
+simmered 1
+addressed 1
+apartment 1
+including 1
+mailboxes 1
+punchline 1
+responded 1
+explaining 1
+recipients 1
+remembered 1
+responding 1
+themselves 1
+unavailable 1
+auto-respond 1
+deactivating 1
+notification 1
+organization 1
+administrative 1
+all-employees@org.edu 1
+
+substituir "Bob" per "Temmie"
+
+taula de frequencies ?
+the 11
+of 7
+they 5
+email 5
+to 4
+and 4
+their 4
+message 3
+auto-responders 3
+ 2
+If 2
+at 2
+on 2
+And 2
+Bob 2
+out 2
+That 2
+back 2
+have 2
+with 2
+your 2
+about 2
+least 2
+missed 2
+people 2
+please 2
+problem 2
+I 1
+a 1
+"I 1
+20 1
+IT 1
+In 1
+So 1
+an 1
+go 1
+is 1
+my 1
+30k 1
+The 1
+but 1
+etc 1
+for 1
+get 1
+had 1
+one 1
+put 1
+say 1
+set 1
+two 1
+was 1
+you 1
+They 1
+This 1
+care 1
+desk 1
+down 1
+from 1
+help 1
+just 1
+lots 1
+most 1
+need 1
+real 1
+same 1
+send 1
+sent 1
+some 1
+them 1
+this 1
+when 1
+after 1
+cause 1
+could 1
+don't 1
+every 1
+first 1
+order 1
+staff 1
+story 1
+these 1
+vacay 1
+(let's 1
+30,000 1
+Before 1
+busied 1
+copies 1
+didn't 1
+itself 1
+online 1
+system 1
+wasn't 1
+absence 1
+brought 1
+contact 1
+mucking 1
+printed 1
+stopped 1
+anything 1
+business 1
+disabled 1
+generate 1
+greatest 1
+incident 1
+messages 1
+might've 1
+millions 1
+simmered 1
+addressed 1
+apartment 1
+including 1
+mailboxes 1
+punchline 1
+responded 1
+explaining 1
+recipients 1
+remembered 1
+responding 1
+themselves 1
+unavailable 1
+auto-respond 1
+deactivating 1
+notification 1
+organization 1
+administrative 1
+all-employees@org.edu 1
+
+substituir "is" per "is"
+
+taula de frequencies ?
+the 11
+of 7
+they 5
+email 5
+to 4
+and 4
+their 4
+message 3
+auto-responders 3
+ 2
+If 2
+at 2
+on 2
+And 2
+Bob 2
+out 2
+That 2
+back 2
+have 2
+with 2
+your 2
+about 2
+least 2
+missed 2
+people 2
+please 2
+problem 2
+I 1
+a 1
+"I 1
+20 1
+IT 1
+In 1
+So 1
+an 1
+go 1
+is 1
+my 1
+30k 1
+The 1
+but 1
+etc 1
+for 1
+get 1
+had 1
+one 1
+put 1
+say 1
+set 1
+two 1
+was 1
+you 1
+They 1
+This 1
+care 1
+desk 1
+down 1
+from 1
+help 1
+just 1
+lots 1
+most 1
+need 1
+real 1
+same 1
+send 1
+sent 1
+some 1
+them 1
+this 1
+when 1
+after 1
+cause 1
+could 1
+don't 1
+every 1
+first 1
+order 1
+staff 1
+story 1
+these 1
+vacay 1
+(let's 1
+30,000 1
+Before 1
+busied 1
+copies 1
+didn't 1
+itself 1
+online 1
+system 1
+wasn't 1
+absence 1
+brought 1
+contact 1
+mucking 1
+printed 1
+stopped 1
+anything 1
+business 1
+disabled 1
+generate 1
+greatest 1
+incident 1
+messages 1
+might've 1
+millions 1
+simmered 1
+addressed 1
+apartment 1
+including 1
+mailboxes 1
+punchline 1
+responded 1
+explaining 1
+recipients 1
+remembered 1
+responding 1
+themselves 1
+unavailable 1
+auto-respond 1
+deactivating 1
+notification 1
+organization 1
+administrative 1
+all-employees@org.edu 1
+
+afegir cita 8 10
+
+totes cites ?
+g1
+8 And they addressed the notification email.
+9 Before they sent their email message, they had disabled most of the auto-responders - but they missed at least one.
+10 they missed at least two.
+guitarsdontdance "Don't bother sending a tech, I'll be dead by then"
+
