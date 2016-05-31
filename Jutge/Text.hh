@@ -31,6 +31,7 @@ private:
     - línies és el conjunt de totes les línies del text
   */
 
+
   static bool comp(const frequencia& a, const frequencia& b);
 
   static void ordenar_frequencies(vector<frequencia>& freqs);
@@ -55,6 +56,8 @@ public:
   /* Post: S'ha substituït la paraula a substituir per la paraula que substitueix */
 
   // Consultores
+
+  static string normalitza (string expressio);
 
   static bool conte_paraula(string text, string paraula);
   /* Pre: Cert */

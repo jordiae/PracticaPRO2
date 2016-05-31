@@ -19,14 +19,14 @@ void Cites::afegir_cita(int frase_inicial, int frase_final, vector<string> frase
     }
     else{
         bool error = false;
-        for (int n = 0; n < (*i).second; n++){
+        for (int n = 0; n < (*i).second+1; n++){
             stringstream nref;
             nref << n;
             string aux = referencia + nref.str();
             map<string, cita>::iterator it = cites.find(aux);
             if (it != cites.end() && ((*it).second.titol_text == titol_text and (*it).second.frase_inicial == frase_inicial and (*it).second.frase_final == frase_final)){
                 cout << "error" << endl;
-                n = (*i).second;
+                n = (*i).second+1;
                 error = true;
             }
         }
@@ -80,7 +80,8 @@ void Cites::imprimir_cites_autor(string nom_autor) {
 	}
 }
 void Cites::imprimir_cites_text(string titol_text) {
-	for (map<string, cita>::const_iterator i = cites.begin(); i != cites.end(); i++) {
+    map<string, cita>::iterator i = cites.begin();
+    while(i != cites.end()){
 		if ((*i).second.titol_text == titol_text) {
             cout << (*i).first << endl;
 			int n = (*i).second.frases.size();
@@ -88,14 +89,17 @@ void Cites::imprimir_cites_text(string titol_text) {
 	    		cout << (*i).second.frase_inicial +k << " " << (*i).second.frases[k] << endl;
             cout << (*i).second.autor << " \"" << (*i).second.titol_text << "\"" << endl;
 		}
+		i++;
 	}
 }
 void Cites::imprimir_totes_cites() {
-	 for (map<string, cita>::iterator it = cites.begin(); it != cites.end(); it++) {
+    map<string, cita>::iterator it = cites.begin();
+    while (it != cites.end()){
 	 	cout << (*it).first << endl;
 	 	for (int i = 0; i < (*it).second.frases.size(); i++)
             cout << (*it).second.frase_inicial + i << " " << (*it).second.frases[i] << endl;
         cout << (*it).second.autor << " \"" << (*it).second.titol_text << "\"" << endl;
+        it++;
 	 }
 }
 
