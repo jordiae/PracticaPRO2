@@ -1,37 +1,14 @@
 
 #include "Text.hh"
 
-Text::Text(){
+Text::Text() {
     num_paraules = 0;
 }
-
-string Text::normalitza (string expressio){
-    string normalitzat;
-    for (int i = 0; i < expressio.size()-1; i++){
-        char c = expressio[i];
-        if (c == '|' or c == '&'){
-            normalitzat += " ";
-            normalitzat += c;
-            normalitzat += " ";
-        }
-        else if (c != ' ')
-            normalitzat += c;
-        else if(((expressio[i+1] >= 'a' and expressio[i+1] <= 'z') or (expressio[i+1] >= 'A' and expressio[i+1] <= 'Z')) and normalitzat[normalitzat.size()-1] != '{'){
-            normalitzat += c;
-        }
-    }
-    char c = expressio[expressio.size()-1];
-    if (c != ' ')
-        normalitzat += c;
-    return normalitzat;
-}
-
-
 
 void Text::afegeix_contingut() {
     string word;
     int i = 0;
-    while(cin >> word && word[0] != '*'){
+    while (cin >> word && word[0] != '*') {
         num_paraules++;
         if (linies.size() == 0)
             linies.push_back("");
@@ -40,11 +17,11 @@ void Text::afegeix_contingut() {
         else
             linies[i] += word;
         char last_char = word[word.size()-1];
-        if (last_char == '.' || last_char == '?' || last_char == '!'){
+        if (last_char == '.' || last_char == '?' || last_char == '!') {
             linies.push_back("");
             i++;
         }
-        if ( !((last_char >= '0' and last_char <= '9') or (last_char >= 'a' and last_char <= 'z') or (last_char >= 'A' and last_char <= 'Z')))
+        if (not ((last_char >= '0' and last_char <= '9') or (last_char >= 'a' and last_char <= 'z') or (last_char >= 'A' and last_char <= 'Z')))
             word.pop_back();
         int n = frequencies.size();
         int j = 0;
@@ -68,8 +45,6 @@ void Text::afegeix_contingut() {
         linies.pop_back();
     ordenar_frequencies(frequencies);
 }
-
-
 
 bool Text::avalua_frase_expressio(string expressio, string frase) {
     if (expressio[0] == '{') {
@@ -133,11 +108,8 @@ bool Text::avalua_frase_expressio(string expressio, string frase) {
             return false;
 
     }
-    else {
-        //expressio.erase(expressio[0],1);
-        //return avalua_frase_expressio(expressio, frase);
+    else
         return false;
-    }
 }
 
 bool Text::comp(const frequencia& a, const frequencia& b) {
@@ -157,30 +129,29 @@ int Text::comptar_paraules() {
     return num_paraules;
 }
 
-bool Text::conte_paraula(string text, string paraula){
+bool Text::conte_paraula(string text, string paraula) {
     stringstream ss;
     ss << text;
     string word;
     while (ss >> word){
         char last = word[word.size() - 1];
-        if (! ( (last >= 'a' and last <= 'z') or (last >= 'A' and last <= 'Z') or (last >= '0' and last <= '9') )) //Checks if last char is not a letter or a number
+        if (not ( (last >= 'a' and last <= 'z') or (last >= 'A' and last <= 'Z') or (last >= '0' and last <= '9') ))
             word.pop_back();
         if (paraula == word)
             return true;
     }
     return false;
+}
 
-}
-void Text::escriure(){
-    for (int i = 0; i < linies.size(); i++){
+void Text::escriure() {
+    for (int i = 0; i < linies.size(); i++)
         cout << i + 1 << " " << linies[i] << endl;
-    }
 }
-bool Text::existeix_paraula(string paraula){
-    for (int i = 0; i < linies.size(); i++){
+
+bool Text::existeix_paraula(string paraula) {
+    for (int i = 0; i < linies.size(); i++)
         if (Text::conte_paraula(linies[i], paraula))
             return true;
-    }
     return false;
 }
 vector<string> Text::frases_x_fins_y(int x, int y) {
@@ -190,8 +161,7 @@ vector<string> Text::frases_x_fins_y(int x, int y) {
     return frases;
 }
 
-
-void Text::imprimeix_frases_paraules(vector<string> &paraules){
+void Text::imprimeix_frases_paraules(vector<string> &paraules) {
     int n = linies.size();
     stringstream ss;
     for (int i = 0; i < n; i++) {
@@ -201,9 +171,9 @@ void Text::imprimeix_frases_paraules(vector<string> &paraules){
         ss << linies[i];
         string word;
         int aux = 0;
-        while (ss >> word and aux != m){
+        while (ss >> word and aux != m) {
             char last = word[word.size() - 1];
-            if (! ( (last >= 'a' and last <= 'z') or (last >= 'A' and last <= 'Z') or (last >= '0' and last <= '9') )) //Checks if last char is not a letter or a number
+            if (not ( (last >= 'a' and last <= 'z') or (last >= 'A' and last <= 'Z') or (last >= '0' and last <= '9') ))
                 word.erase(word.size() - 1, 1);
             if (paraules[aux] == word)
                 aux++;
@@ -212,47 +182,47 @@ void Text::imprimeix_frases_paraules(vector<string> &paraules){
         }
         if (aux == m)
             cout << i+1 << " " << linies[i] << endl;
-
     }
 }
 
-
-void Text::imprimeix_linies(int primera_linia, int ultima_linia){
+void Text::imprimeix_linies(int primera_linia, int ultima_linia) {
     for (int i = primera_linia-1; i <= ultima_linia-1; i++)
         cout << i+1 << " " << linies[i] << endl;
 }
+
 void Text::imprimeix_nombre_frases(){
     cout << linies.size();
 }
+
 void Text::imprimeix_nombre_paraules() {
    cout << num_paraules;
 }
+
 void Text::imprimeix_taula_frequencies() {
     int n = frequencies.size();
     for (int i = 0; i < n; i++)
         cout << frequencies[i].paraula << " " << frequencies[i].freq << endl;
 }
+
 void Text::ordenar_frequencies(vector<frequencia>& freqs) {
     if (freqs.size() > 0)
         sort(freqs.begin(), freqs.end(), comp);
     while (freqs.size() > 0 && freqs[freqs.size() - 1].freq == 0)
         freqs.pop_back();
 }
+
 void Text::substituir(string paraula_a_substituir, string paraula_que_substitueix) {
     int p1_pos = -1;
     int p2_pos = -1;
-    for (int i = 0; i < frequencies.size() and (p1_pos == -1 or p2_pos == -1); i++){
+    for (int i = 0; i < frequencies.size() and (p1_pos == -1 or p2_pos == -1); i++) {
         if (frequencies[i].paraula == paraula_a_substituir)
             p1_pos = i;
         if (frequencies[i].paraula == paraula_que_substitueix)
             p2_pos = i;
     }
-
-
-    if (p1_pos != -1 and p1_pos != p2_pos){
+    if (p1_pos != -1 and p1_pos != p2_pos) {
         int n = linies.size();
         for (int i = 0; i < n; i++) {
-
             string Frase = "";
             bool first = true;
             bool signe = false;
@@ -261,77 +231,44 @@ void Text::substituir(string paraula_a_substituir, string paraula_que_substituei
             ss.clear();
             ss << linies[i];
             string word;
-            while (ss >> word){
+            while (ss >> word) {
                 signe = false;
-
-                if (not first){
+                if (not first)
                     Frase += " ";
-                }
                 else
                     first = false;
                 char last = word[word.size() - 1];
-                if (! ( (last >= 'a' and last <= 'z') or (last >= 'A' and last <= 'Z') or (last >= '0' and last <= '9') )){ //Checks if last char is not a letter or a number
+                if (not ( (last >= 'a' and last <= 'z') or (last >= 'A' and last <= 'Z') or (last >= '0' and last <= '9') )){
                     word.erase(word.size() - 1, 1);
                     signe = true;
                 }
-
-                if (paraula_a_substituir == word){
-                    if (signe){
+                if (paraula_a_substituir == word) {
+                    if (signe)
                         Frase += paraula_que_substitueix + last;
-                    }
-                    else{
+                    else
                         Frase += paraula_que_substitueix;
-                    }
-
                 }
-                else{
-                    if (signe){
+                else {
+                    if (signe)
                         Frase += word + last;
-                    }
-                    else{
+                    else
                         Frase += word;
-                    }
                 }
             }
             linies[i] = Frase;
         }
     }
-
-     /*string s = paraula_que_substitueix;
-    bool empty = true;
-    while (empty and s.size() > 0) {
-        if (s[s.size()-1] != ' ')
-            empty = false;
-        s.pop_back();
-    }
-    if (empty)
-        if (frequencies.size() > 0) {
-        if (p2_pos != -1){
-            if (not empty)
-                frequencies[p2_pos].freq += frequencies[p1_pos].freq;
-                frequencies[p1_pos].freq = 0;
-        }
-        else{
-            if (not empty)
-                frequencies[p1_pos].paraula = paraula_que_substitueix;
-            else 
-                frequencies[p1_pos].freq = 0;
-        }
-    }*/
-    
-    if (p1_pos != -1 and p2_pos != -1){
+    if (p1_pos != -1 and p2_pos != -1) {
         frequencies[p2_pos].freq += frequencies[p1_pos].freq;
-            frequencies[p1_pos].freq = 0;
+        frequencies[p1_pos].freq = 0;
     }
-    else if (p1_pos != -1){
+    else if (p1_pos != -1) {
         if (paraula_que_substitueix != "")
             frequencies[p1_pos].paraula = paraula_que_substitueix;
         else
             frequencies[p1_pos].freq = 0;
     }
     ordenar_frequencies(frequencies);
-
 }
-Text::~Text() {
 
-}
+Text::~Text() {}

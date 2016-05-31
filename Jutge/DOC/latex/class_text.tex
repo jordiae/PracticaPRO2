@@ -1,0 +1,689 @@
+\hypertarget{class_text}{\section{Referència de la Classe Text}
+\label{class_text}\index{Text@{Text}}
+}
+
+
+\hyperlink{class_text}{Text}.  
+
+
+\subsection*{Mètodes públics}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_text_ab3e26143fccc52699bcc5149cae852bc}{Text} ()
+\begin{DoxyCompactList}\small\item\em Mètode ordenar un vector freqüencies, de manera decreixent per freqs i, en cas d'empat, per paraula més petita i ordre alfabètic. \end{DoxyCompactList}\item 
+\hyperlink{class_text_a2d49e5c280e205125b149f7777ae30c7}{$\sim$\+Text} ()
+\begin{DoxyCompactList}\small\item\em Constructora de la classe. \end{DoxyCompactList}\item 
+void \hyperlink{class_text_a2c90f81b63e3d0b1fbef2cc68d1e41bd}{substituir} (string paraula\+\_\+a\+\_\+substituir, string paraula\+\_\+que\+\_\+substitueix)
+\item 
+vector$<$ string $>$ \hyperlink{class_text_a72f045bd50c4b5ea7d8697f71a4f72ee}{frases\+\_\+x\+\_\+fins\+\_\+y} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Mètode per determinar si una string conté una paraula. \end{DoxyCompactList}\item 
+int \hyperlink{class_text_a9e70c8b7ca58a9f73060d524c9b4e474}{comptar\+\_\+linies} ()
+\begin{DoxyCompactList}\small\item\em Mètode per consultar frases d'un text. \end{DoxyCompactList}\item 
+int \hyperlink{class_text_a334760b16b71f1fec0ce9b7f8f86788a}{comptar\+\_\+paraules} ()
+\begin{DoxyCompactList}\small\item\em Mètode per consultar el nombre de línies d'un text. \end{DoxyCompactList}\item 
+bool \hyperlink{class_text_a2f935a61b802f79570fa352329acf8ff}{existeix\+\_\+paraula} (string paraula)
+\begin{DoxyCompactList}\small\item\em Mètode per consultar el nombre de paraules d'un text. \end{DoxyCompactList}\item 
+bool \hyperlink{class_text_a0ed26a599eeacb2eda891134f2d38ae8}{avalua\+\_\+frase\+\_\+expressio} (string expressio, string frase)
+\begin{DoxyCompactList}\small\item\em Mètode per consultar si el p.\+i. conté una paraula. \end{DoxyCompactList}\item 
+void \hyperlink{class_text_aea5ba5d02adc209b2ed4f948705dc60a}{afegeix\+\_\+contingut} ()
+\begin{DoxyCompactList}\small\item\em Mètode per avaluar una expressió booleana de paraules. \end{DoxyCompactList}\item 
+void \hyperlink{class_text_a9a686e90e9f8f8b2f8b53beaf097af78}{imprimeix\+\_\+linies} (int primera\+\_\+linia, int ultima\+\_\+linia)
+\begin{DoxyCompactList}\small\item\em Mètode per afegir contingut al text. \end{DoxyCompactList}\item 
+void \hyperlink{class_text_acde1aef4685230f91a9bf3c8af708a90}{escriure} ()
+\begin{DoxyCompactList}\small\item\em Mètode per imprimir unes determinades línies del text. \end{DoxyCompactList}\item 
+void \hyperlink{class_text_ad91853d8dc6df6e97a16f7180c49eda3}{imprimeix\+\_\+nombre\+\_\+frases} ()
+\begin{DoxyCompactList}\small\item\em Mètode per escriure el text. \end{DoxyCompactList}\item 
+void \hyperlink{class_text_a3da13d29c07e07416ac49384e43e0e9d}{imprimeix\+\_\+nombre\+\_\+paraules} ()
+\begin{DoxyCompactList}\small\item\em Mètode per imprimir el nombre de frases del text. \end{DoxyCompactList}\item 
+void \hyperlink{class_text_a8ddf3381946d6eebe4a90c8fb0d437d5}{imprimeix\+\_\+taula\+\_\+frequencies} ()
+\begin{DoxyCompactList}\small\item\em Mètode per imprimir el nombre de paraules del text. \end{DoxyCompactList}\item 
+void \hyperlink{class_text_ae9b60cdfa763651d4093bf897383e5d7}{imprimeix\+\_\+frases\+\_\+paraules} (vector$<$ string $>$ \&paraules)
+\begin{DoxyCompactList}\small\item\em Mètode per imprimir la taula de freqüències de les paraules del text. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Mètodes Públics Estàtics}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{class_text_a86b69aad96995bea56567e3450dbe25c}{conte\+\_\+paraula} (string text, string paraula)
+\begin{DoxyCompactList}\small\item\em Mètode per substituir una paraula per un altra. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripció Detallada}
+\hyperlink{class_text}{Text}. 
+
+Definició a la línia 21 del fitxer Text.\+hh.
+
+
+
+\subsection{Documentació del Constructor i el Destructor}
+\hypertarget{class_text_ab3e26143fccc52699bcc5149cae852bc}{\index{Text@{Text}!Text@{Text}}
+\index{Text@{Text}!Text@{Text}}
+\subsubsection[{Text}]{\setlength{\rightskip}{0pt plus 5cm}Text\+::\+Text (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_text_ab3e26143fccc52699bcc5149cae852bc}
+
+
+Mètode ordenar un vector freqüencies, de manera decreixent per freqs i, en cas d'empat, per paraula més petita i ordre alfabètic. 
+
+\begin{DoxyPrecond}{Precondició}
+freqs = freqs 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+S'ha ordenat ordenar\+\_\+frequencies 
+\end{DoxyPostcond}
+
+
+Definició a la línia 4 del fitxer Text.\+cc.
+
+
+\begin{DoxyCode}
+4            \{
+5     num\_paraules = 0;
+6 \}
+\end{DoxyCode}
+\hypertarget{class_text_a2d49e5c280e205125b149f7777ae30c7}{\index{Text@{Text}!````~Text@{$\sim$\+Text}}
+\index{````~Text@{$\sim$\+Text}!Text@{Text}}
+\subsubsection[{$\sim$\+Text}]{\setlength{\rightskip}{0pt plus 5cm}Text\+::$\sim$\+Text (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_text_a2d49e5c280e205125b149f7777ae30c7}
+
+
+Constructora de la classe. 
+
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+El resultat és un text buit 
+\end{DoxyPostcond}
+
+
+Definició a la línia 274 del fitxer Text.\+cc.
+
+
+\begin{DoxyCode}
+274 \{\}
+\end{DoxyCode}
+
+
+\subsection{Documentació de les Funcions Membre}
+\hypertarget{class_text_a2c90f81b63e3d0b1fbef2cc68d1e41bd}{\index{Text@{Text}!substituir@{substituir}}
+\index{substituir@{substituir}!Text@{Text}}
+\subsubsection[{substituir}]{\setlength{\rightskip}{0pt plus 5cm}void Text\+::substituir (
+\begin{DoxyParamCaption}
+\item[{string}]{paraula\+\_\+a\+\_\+substituir, }
+\item[{string}]{paraula\+\_\+que\+\_\+substitueix}
+\end{DoxyParamCaption}
+)}}\label{class_text_a2c90f81b63e3d0b1fbef2cc68d1e41bd}
+
+
+Definició a la línia 214 del fitxer Text.\+cc.
+
+
+\begin{DoxyCode}
+214                                                                                  \{
+215     \textcolor{keywordtype}{int} p1\_pos = -1;
+216     \textcolor{keywordtype}{int} p2\_pos = -1;
+217     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < frequencies.size() and (p1\_pos == -1 or p2\_pos == -1); i++) \{
+218         \textcolor{keywordflow}{if} (frequencies[i].paraula == paraula\_a\_substituir)
+219             p1\_pos = i;
+220         \textcolor{keywordflow}{if} (frequencies[i].paraula == paraula\_que\_substitueix)
+221             p2\_pos = i;
+222     \}
+223     \textcolor{keywordflow}{if} (p1\_pos != -1 and p1\_pos != p2\_pos) \{
+224         \textcolor{keywordtype}{int} n = linies.size();
+225         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; i++) \{
+226             \textcolor{keywordtype}{string} Frase = \textcolor{stringliteral}{""};
+227             \textcolor{keywordtype}{bool} first = \textcolor{keyword}{true};
+228             \textcolor{keywordtype}{bool} signe = \textcolor{keyword}{false};
+229             stringstream ss;
+230             ss.str(\textcolor{stringliteral}{""});
+231             ss.clear();
+232             ss << linies[i];
+233             \textcolor{keywordtype}{string} word;
+234             \textcolor{keywordflow}{while} (ss >> word) \{
+235                 signe = \textcolor{keyword}{false};
+236                 \textcolor{keywordflow}{if} (not first)
+237                     Frase += \textcolor{stringliteral}{" "};
+238                 \textcolor{keywordflow}{else}
+239                     first = \textcolor{keyword}{false};
+240                 \textcolor{keywordtype}{char} last = word[word.size() - 1];
+241                 \textcolor{keywordflow}{if} (not ( (last >= \textcolor{charliteral}{'a'} and last <= \textcolor{charliteral}{'z'}) or (last >= \textcolor{charliteral}{'A'} and last <= \textcolor{charliteral}{'Z'}) or (last >= \textcolor{charliteral}{'0'} 
+      and last <= \textcolor{charliteral}{'9'}) ))\{
+242                     word.erase(word.size() - 1, 1);
+243                     signe = \textcolor{keyword}{true};
+244                 \}
+245                 \textcolor{keywordflow}{if} (paraula\_a\_substituir == word) \{
+246                     \textcolor{keywordflow}{if} (signe)
+247                         Frase += paraula\_que\_substitueix + last;
+248                     \textcolor{keywordflow}{else}
+249                         Frase += paraula\_que\_substitueix;
+250                 \}
+251                 \textcolor{keywordflow}{else} \{
+252                     \textcolor{keywordflow}{if} (signe)
+253                         Frase += word + last;
+254                     \textcolor{keywordflow}{else}
+255                         Frase += word;
+256                 \}
+257             \}
+258             linies[i] = Frase;
+259         \}
+260     \}
+261     \textcolor{keywordflow}{if} (p1\_pos != -1 and p2\_pos != -1) \{
+262         frequencies[p2\_pos].freq += frequencies[p1\_pos].freq;
+263         frequencies[p1\_pos].freq = 0;
+264     \}
+265     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (p1\_pos != -1) \{
+266         \textcolor{keywordflow}{if} (paraula\_que\_substitueix != \textcolor{stringliteral}{""})
+267             frequencies[p1\_pos].paraula = paraula\_que\_substitueix;
+268         \textcolor{keywordflow}{else}
+269             frequencies[p1\_pos].freq = 0;
+270     \}
+271     ordenar\_frequencies(frequencies);
+272 \}
+\end{DoxyCode}
+\hypertarget{class_text_a86b69aad96995bea56567e3450dbe25c}{\index{Text@{Text}!conte\+\_\+paraula@{conte\+\_\+paraula}}
+\index{conte\+\_\+paraula@{conte\+\_\+paraula}!Text@{Text}}
+\subsubsection[{conte\+\_\+paraula}]{\setlength{\rightskip}{0pt plus 5cm}bool Text\+::conte\+\_\+paraula (
+\begin{DoxyParamCaption}
+\item[{string}]{text, }
+\item[{string}]{paraula}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_text_a86b69aad96995bea56567e3450dbe25c}
+
+
+Mètode per substituir una paraula per un altra. 
+
+\begin{DoxyPrecond}{Precondició}
+S'ha seleccionat un text 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+S'ha substituït la paraula a substituir per la paraula que substitueix 
+\end{DoxyPostcond}
+
+
+Definició a la línia 132 del fitxer Text.\+cc.
+
+
+\begin{DoxyCode}
+132                                                     \{
+133     stringstream ss;
+134     ss << text;
+135     \textcolor{keywordtype}{string} word;
+136     \textcolor{keywordflow}{while} (ss >> word)\{
+137         \textcolor{keywordtype}{char} last = word[word.size() - 1];
+138         \textcolor{keywordflow}{if} (not ( (last >= \textcolor{charliteral}{'a'} and last <= \textcolor{charliteral}{'z'}) or (last >= \textcolor{charliteral}{'A'} and last <= \textcolor{charliteral}{'Z'}) or (last >= \textcolor{charliteral}{'0'} and last 
+      <= \textcolor{charliteral}{'9'}) ))
+139             word.pop\_back();
+140         \textcolor{keywordflow}{if} (paraula == word)
+141             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+142     \}
+143     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+144 \}
+\end{DoxyCode}
+\hypertarget{class_text_a72f045bd50c4b5ea7d8697f71a4f72ee}{\index{Text@{Text}!frases\+\_\+x\+\_\+fins\+\_\+y@{frases\+\_\+x\+\_\+fins\+\_\+y}}
+\index{frases\+\_\+x\+\_\+fins\+\_\+y@{frases\+\_\+x\+\_\+fins\+\_\+y}!Text@{Text}}
+\subsubsection[{frases\+\_\+x\+\_\+fins\+\_\+y}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ string $>$ Text\+::frases\+\_\+x\+\_\+fins\+\_\+y (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_text_a72f045bd50c4b5ea7d8697f71a4f72ee}
+
+
+Mètode per determinar si una string conté una paraula. 
+
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Retorna si el string text conté el string paraula 
+\end{DoxyPostcond}
+
+
+Definició a la línia 157 del fitxer Text.\+cc.
+
+
+\begin{DoxyCode}
+157                                                  \{
+158     vector<string> frases;
+159     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = x-1; i <= y-1; i++)
+160         frases.push\_back(linies[i]);
+161     \textcolor{keywordflow}{return} frases;
+162 \}
+\end{DoxyCode}
+\hypertarget{class_text_a9e70c8b7ca58a9f73060d524c9b4e474}{\index{Text@{Text}!comptar\+\_\+linies@{comptar\+\_\+linies}}
+\index{comptar\+\_\+linies@{comptar\+\_\+linies}!Text@{Text}}
+\subsubsection[{comptar\+\_\+linies}]{\setlength{\rightskip}{0pt plus 5cm}int Text\+::comptar\+\_\+linies (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_text_a9e70c8b7ca58a9f73060d524c9b4e474}
+
+
+Mètode per consultar frases d'un text. 
+
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Es retorna un vector que conté les frases x a y 
+\end{DoxyPostcond}
+
+
+Definició a la línia 124 del fitxer Text.\+cc.
+
+
+\begin{DoxyCode}
+124                          \{
+125     \textcolor{keywordflow}{return} linies.size();
+126 \}
+\end{DoxyCode}
+\hypertarget{class_text_a334760b16b71f1fec0ce9b7f8f86788a}{\index{Text@{Text}!comptar\+\_\+paraules@{comptar\+\_\+paraules}}
+\index{comptar\+\_\+paraules@{comptar\+\_\+paraules}!Text@{Text}}
+\subsubsection[{comptar\+\_\+paraules}]{\setlength{\rightskip}{0pt plus 5cm}int Text\+::comptar\+\_\+paraules (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_text_a334760b16b71f1fec0ce9b7f8f86788a}
+
+
+Mètode per consultar el nombre de línies d'un text. 
+
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Retorna el nombre de línies del paràmetre implícit 
+\end{DoxyPostcond}
+
+
+Definició a la línia 128 del fitxer Text.\+cc.
+
+
+\begin{DoxyCode}
+128                            \{
+129     \textcolor{keywordflow}{return} num\_paraules;
+130 \}
+\end{DoxyCode}
+\hypertarget{class_text_a2f935a61b802f79570fa352329acf8ff}{\index{Text@{Text}!existeix\+\_\+paraula@{existeix\+\_\+paraula}}
+\index{existeix\+\_\+paraula@{existeix\+\_\+paraula}!Text@{Text}}
+\subsubsection[{existeix\+\_\+paraula}]{\setlength{\rightskip}{0pt plus 5cm}bool Text\+::existeix\+\_\+paraula (
+\begin{DoxyParamCaption}
+\item[{string}]{paraula}
+\end{DoxyParamCaption}
+)}}\label{class_text_a2f935a61b802f79570fa352329acf8ff}
+
+
+Mètode per consultar el nombre de paraules d'un text. 
+
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Retorna el nombre de paraules del text 
+\end{DoxyPostcond}
+
+
+Definició a la línia 151 del fitxer Text.\+cc.
+
+
+\begin{DoxyCode}
+151                                           \{
+152     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < linies.size(); i++)
+153         \textcolor{keywordflow}{if} (\hyperlink{class_text_a86b69aad96995bea56567e3450dbe25c}{Text::conte\_paraula}(linies[i], paraula))
+154             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+155     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+156 \}
+\end{DoxyCode}
+\hypertarget{class_text_a0ed26a599eeacb2eda891134f2d38ae8}{\index{Text@{Text}!avalua\+\_\+frase\+\_\+expressio@{avalua\+\_\+frase\+\_\+expressio}}
+\index{avalua\+\_\+frase\+\_\+expressio@{avalua\+\_\+frase\+\_\+expressio}!Text@{Text}}
+\subsubsection[{avalua\+\_\+frase\+\_\+expressio}]{\setlength{\rightskip}{0pt plus 5cm}bool Text\+::avalua\+\_\+frase\+\_\+expressio (
+\begin{DoxyParamCaption}
+\item[{string}]{expressio, }
+\item[{string}]{frase}
+\end{DoxyParamCaption}
+)}}\label{class_text_a0ed26a599eeacb2eda891134f2d38ae8}
+
+
+Mètode per consultar si el p.\+i. conté una paraula. 
+
+\begin{DoxyPrecond}{Precondició}
+S'ha seleccionat un text 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Es retorna si la paraula es troba al text 
+\end{DoxyPostcond}
+
+
+Definició a la línia 49 del fitxer Text.\+cc.
+
+
+\begin{DoxyCode}
+49                                                                 \{
+50     \textcolor{keywordflow}{if} (expressio[0] == \textcolor{charliteral}{'\{'}) \{
+51         \textcolor{keywordtype}{int} i = 1;
+52         \textcolor{keywordtype}{string} paraules;
+53         \textcolor{keywordflow}{while} (expressio[i] != \textcolor{charliteral}{'\}'}) \{
+54             paraules.push\_back(expressio[i]);
+55             i++;
+56         \}
+57         \textcolor{keywordtype}{string} paraula = \textcolor{stringliteral}{""};
+58         \textcolor{keywordtype}{int} m = paraules.size();
+59         \textcolor{keywordtype}{int} j = 0;
+60         \textcolor{keywordtype}{bool} compleix = \textcolor{keyword}{true};
+61         \textcolor{keywordflow}{while} (j < m) \{
+62             \textcolor{keywordflow}{if} (paraules[j] != 32)
+63                 paraula += paraules[j];
+64             \textcolor{keywordflow}{else} \{
+65                 \textcolor{keywordflow}{if} (not \hyperlink{class_text_a86b69aad96995bea56567e3450dbe25c}{Text::conte\_paraula}(frase, paraula))
+66                     compleix = \textcolor{keyword}{false};
+67                 paraula = \textcolor{stringliteral}{""};
+68             \}
+69             j++;
+70         \}
+71         compleix = compleix and \hyperlink{class_text_a86b69aad96995bea56567e3450dbe25c}{Text::conte\_paraula}(frase, paraula);
+72         \textcolor{keywordflow}{return} compleix;
+73 
+74     \}
+75     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (expressio[0] == \textcolor{charliteral}{'('}) \{
+76         \textcolor{keywordtype}{int} parenthesis\_counter = 1;
+77         \textcolor{keywordtype}{int} i = 1;
+78         \textcolor{keywordtype}{char} op;
+79         \textcolor{keywordtype}{int} pos\_op = -1;
+80         \textcolor{keywordflow}{while} (parenthesis\_counter != 0) \{
+81             \textcolor{keywordflow}{if} (expressio[i] == \textcolor{charliteral}{'('})
+82                 parenthesis\_counter++;
+83             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (expressio[i] == \textcolor{charliteral}{')'})
+84                  parenthesis\_counter--;
+85             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (expressio[i] == \textcolor{charliteral}{'&'} and parenthesis\_counter == 1) \{
+86                 pos\_op = i;
+87                 op = \textcolor{charliteral}{'&'};
+88             \}
+89             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (expressio[i] == \textcolor{charliteral}{'|'} and parenthesis\_counter == 1) \{
+90                 pos\_op = i;
+91                 op = \textcolor{charliteral}{'|'};
+92             \}
+93             ++i;
+94         \}
+95         \textcolor{keywordtype}{string} expressio\_esquerra, expressio\_dreta;
+96         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 1; j <= (pos\_op -2) ; j++)
+97             expressio\_esquerra.push\_back(expressio[j]);
+98         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = pos\_op+2; j < i ; j++)
+99             expressio\_dreta.push\_back(expressio[j]);
+100         \textcolor{keywordtype}{bool} be = \hyperlink{class_text_a0ed26a599eeacb2eda891134f2d38ae8}{avalua\_frase\_expressio}(expressio\_esquerra,frase);
+101         \textcolor{keywordflow}{if} (not be and op == \textcolor{charliteral}{'&'})
+102             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+103         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (be and op == \textcolor{charliteral}{'|'})
+104             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+105         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((not be and op == \textcolor{charliteral}{'|'}) or (be and op == \textcolor{charliteral}{'&'}))
+106             \textcolor{keywordflow}{return} \hyperlink{class_text_a0ed26a599eeacb2eda891134f2d38ae8}{avalua\_frase\_expressio}(expressio\_dreta,frase);
+107         \textcolor{keywordflow}{else}
+108             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+109 
+110     \}
+111     \textcolor{keywordflow}{else}
+112         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+113 \}
+\end{DoxyCode}
+\hypertarget{class_text_aea5ba5d02adc209b2ed4f948705dc60a}{\index{Text@{Text}!afegeix\+\_\+contingut@{afegeix\+\_\+contingut}}
+\index{afegeix\+\_\+contingut@{afegeix\+\_\+contingut}!Text@{Text}}
+\subsubsection[{afegeix\+\_\+contingut}]{\setlength{\rightskip}{0pt plus 5cm}void Text\+::afegeix\+\_\+contingut (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_text_aea5ba5d02adc209b2ed4f948705dc60a}
+
+
+Mètode per avaluar una expressió booleana de paraules. 
+
+\begin{DoxyPrecond}{Precondició}
+expressio és una expressió booleana de paraules vàlida 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Retorna si la frase frase compleix l'expressió o no 
+\end{DoxyPostcond}
+
+
+Definició a la línia 8 del fitxer Text.\+cc.
+
+
+\begin{DoxyCode}
+8                              \{
+9     \textcolor{keywordtype}{string} word;
+10     \textcolor{keywordtype}{int} i = 0;
+11     \textcolor{keywordflow}{while} (cin >> word && word[0] != \textcolor{charliteral}{'*'}) \{
+12         num\_paraules++;
+13         \textcolor{keywordflow}{if} (linies.size() == 0)
+14             linies.push\_back(\textcolor{stringliteral}{""});
+15         \textcolor{keywordflow}{if} (linies[i].size() != 0)
+16             linies[i] += \textcolor{stringliteral}{" "} + word;
+17         \textcolor{keywordflow}{else}
+18             linies[i] += word;
+19         \textcolor{keywordtype}{char} last\_char = word[word.size()-1];
+20         \textcolor{keywordflow}{if} (last\_char == \textcolor{charliteral}{'.'} || last\_char == \textcolor{charliteral}{'?'} || last\_char == \textcolor{charliteral}{'!'}) \{
+21             linies.push\_back(\textcolor{stringliteral}{""});
+22             i++;
+23         \}
+24         \textcolor{keywordflow}{if} (not ((last\_char >= \textcolor{charliteral}{'0'} and last\_char <= \textcolor{charliteral}{'9'}) or (last\_char >= \textcolor{charliteral}{'a'} and last\_char <= \textcolor{charliteral}{'z'}) or (
+      last\_char >= \textcolor{charliteral}{'A'} and last\_char <= \textcolor{charliteral}{'Z'})))
+25             word.pop\_back();
+26         \textcolor{keywordtype}{int} n = frequencies.size();
+27         \textcolor{keywordtype}{int} j = 0;
+28         \textcolor{keywordtype}{bool} foundd = \textcolor{keyword}{false};
+29         \textcolor{keywordflow}{while} (not foundd and j < n) \{
+30             \textcolor{keywordflow}{if} (frequencies[j].paraula == word)
+31                 foundd = \textcolor{keyword}{true};
+32             \textcolor{keywordflow}{else}
+33                 j++;
+34         \}
+35         \textcolor{keywordflow}{if} (foundd)
+36             frequencies[j].freq++;
+37         \textcolor{keywordflow}{else} \{
+38             frequencia f;
+39             f.paraula = word;
+40             f.freq = 1;
+41             frequencies.push\_back(f);
+42         \}
+43     \}
+44     \textcolor{keywordflow}{if} (linies.size() != 0 && linies[linies.size()-1].size() == 0)
+45         linies.pop\_back();
+46     ordenar\_frequencies(frequencies);
+47 \}
+\end{DoxyCode}
+\hypertarget{class_text_a9a686e90e9f8f8b2f8b53beaf097af78}{\index{Text@{Text}!imprimeix\+\_\+linies@{imprimeix\+\_\+linies}}
+\index{imprimeix\+\_\+linies@{imprimeix\+\_\+linies}!Text@{Text}}
+\subsubsection[{imprimeix\+\_\+linies}]{\setlength{\rightskip}{0pt plus 5cm}void Text\+::imprimeix\+\_\+linies (
+\begin{DoxyParamCaption}
+\item[{int}]{primera\+\_\+linia, }
+\item[{int}]{ultima\+\_\+linia}
+\end{DoxyParamCaption}
+)}}\label{class_text_a9a686e90e9f8f8b2f8b53beaf097af78}
+
+
+Mètode per afegir contingut al text. 
+
+\begin{DoxyPrecond}{Precondició}
+S'ha llegit el títol del text i el seu autor, el contingut es troba al canal d'entrada estàndard 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+S'ha afegit el contingut llegit al p.\+i. 
+\end{DoxyPostcond}
+
+
+Definició a la línia 188 del fitxer Text.\+cc.
+
+
+\begin{DoxyCode}
+188                                                                \{
+189     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = primera\_linia-1; i <= ultima\_linia-1; i++)
+190         cout << i+1 << \textcolor{stringliteral}{" "} << linies[i] << endl;
+191 \}
+\end{DoxyCode}
+\hypertarget{class_text_acde1aef4685230f91a9bf3c8af708a90}{\index{Text@{Text}!escriure@{escriure}}
+\index{escriure@{escriure}!Text@{Text}}
+\subsubsection[{escriure}]{\setlength{\rightskip}{0pt plus 5cm}void Text\+::escriure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_text_acde1aef4685230f91a9bf3c8af708a90}
+
+
+Mètode per imprimir unes determinades línies del text. 
+
+\begin{DoxyPrecond}{Precondició}
+0 $<$= primera\+\_\+linia $<$= ultima\+\_\+linia $<$= nombre de linies del paràmetre implícit 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+S'ha imprès les línies corresponets a la sortida estàndard 
+\end{DoxyPostcond}
+
+
+Definició a la línia 146 del fitxer Text.\+cc.
+
+
+\begin{DoxyCode}
+146                     \{
+147     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < linies.size(); i++)
+148         cout << i + 1 << \textcolor{stringliteral}{" "} << linies[i] << endl;
+149 \}
+\end{DoxyCode}
+\hypertarget{class_text_ad91853d8dc6df6e97a16f7180c49eda3}{\index{Text@{Text}!imprimeix\+\_\+nombre\+\_\+frases@{imprimeix\+\_\+nombre\+\_\+frases}}
+\index{imprimeix\+\_\+nombre\+\_\+frases@{imprimeix\+\_\+nombre\+\_\+frases}!Text@{Text}}
+\subsubsection[{imprimeix\+\_\+nombre\+\_\+frases}]{\setlength{\rightskip}{0pt plus 5cm}void Text\+::imprimeix\+\_\+nombre\+\_\+frases (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_text_ad91853d8dc6df6e97a16f7180c49eda3}
+
+
+Mètode per escriure el text. 
+
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+S'ha escrit el text pel canal estàndard de sortida 
+\end{DoxyPostcond}
+
+
+Definició a la línia 193 del fitxer Text.\+cc.
+
+
+\begin{DoxyCode}
+193                                   \{
+194     cout << linies.size();
+195 \}
+\end{DoxyCode}
+\hypertarget{class_text_a3da13d29c07e07416ac49384e43e0e9d}{\index{Text@{Text}!imprimeix\+\_\+nombre\+\_\+paraules@{imprimeix\+\_\+nombre\+\_\+paraules}}
+\index{imprimeix\+\_\+nombre\+\_\+paraules@{imprimeix\+\_\+nombre\+\_\+paraules}!Text@{Text}}
+\subsubsection[{imprimeix\+\_\+nombre\+\_\+paraules}]{\setlength{\rightskip}{0pt plus 5cm}void Text\+::imprimeix\+\_\+nombre\+\_\+paraules (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_text_a3da13d29c07e07416ac49384e43e0e9d}
+
+
+Mètode per imprimir el nombre de frases del text. 
+
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+S'ha imprès pel canal de sortida estàndard el nombre total d'elements del paràmetre implícit 
+\end{DoxyPostcond}
+
+
+Definició a la línia 197 del fitxer Text.\+cc.
+
+
+\begin{DoxyCode}
+197                                      \{
+198    cout << num\_paraules;
+199 \}
+\end{DoxyCode}
+\hypertarget{class_text_a8ddf3381946d6eebe4a90c8fb0d437d5}{\index{Text@{Text}!imprimeix\+\_\+taula\+\_\+frequencies@{imprimeix\+\_\+taula\+\_\+frequencies}}
+\index{imprimeix\+\_\+taula\+\_\+frequencies@{imprimeix\+\_\+taula\+\_\+frequencies}!Text@{Text}}
+\subsubsection[{imprimeix\+\_\+taula\+\_\+frequencies}]{\setlength{\rightskip}{0pt plus 5cm}void Text\+::imprimeix\+\_\+taula\+\_\+frequencies (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_text_a8ddf3381946d6eebe4a90c8fb0d437d5}
+
+
+Mètode per imprimir el nombre de paraules del text. 
+
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+S'ha imprès pel canal de sortida estàndard el nombre total d'elements de frases 
+\end{DoxyPostcond}
+
+
+Definició a la línia 201 del fitxer Text.\+cc.
+
+
+\begin{DoxyCode}
+201                                        \{
+202     \textcolor{keywordtype}{int} n = frequencies.size();
+203     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; i++)
+204         cout << frequencies[i].paraula << \textcolor{stringliteral}{" "} << frequencies[i].freq << endl;
+205 \}
+\end{DoxyCode}
+\hypertarget{class_text_ae9b60cdfa763651d4093bf897383e5d7}{\index{Text@{Text}!imprimeix\+\_\+frases\+\_\+paraules@{imprimeix\+\_\+frases\+\_\+paraules}}
+\index{imprimeix\+\_\+frases\+\_\+paraules@{imprimeix\+\_\+frases\+\_\+paraules}!Text@{Text}}
+\subsubsection[{imprimeix\+\_\+frases\+\_\+paraules}]{\setlength{\rightskip}{0pt plus 5cm}void Text\+::imprimeix\+\_\+frases\+\_\+paraules (
+\begin{DoxyParamCaption}
+\item[{vector$<$ string $>$ \&}]{paraules}
+\end{DoxyParamCaption}
+)}}\label{class_text_ae9b60cdfa763651d4093bf897383e5d7}
+
+
+Mètode per imprimir la taula de freqüències de les paraules del text. 
+
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+S'ha imprès pel canal de sortida estàndard les paraules de frases i la seva freqüència 
+\end{DoxyPostcond}
+
+
+Definició a la línia 164 del fitxer Text.\+cc.
+
+
+\begin{DoxyCode}
+164                                                              \{
+165     \textcolor{keywordtype}{int} n = linies.size();
+166     stringstream ss;
+167     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; i++) \{
+168         \textcolor{keywordtype}{int} m = paraules.size();
+169         ss.str(\textcolor{stringliteral}{""});
+170         ss.clear();
+171         ss << linies[i];
+172         \textcolor{keywordtype}{string} word;
+173         \textcolor{keywordtype}{int} aux = 0;
+174         \textcolor{keywordflow}{while} (ss >> word and aux != m) \{
+175             \textcolor{keywordtype}{char} last = word[word.size() - 1];
+176             \textcolor{keywordflow}{if} (not ( (last >= \textcolor{charliteral}{'a'} and last <= \textcolor{charliteral}{'z'}) or (last >= \textcolor{charliteral}{'A'} and last <= \textcolor{charliteral}{'Z'}) or (last >= \textcolor{charliteral}{'0'} and 
+      last <= \textcolor{charliteral}{'9'}) ))
+177                 word.erase(word.size() - 1, 1);
+178             \textcolor{keywordflow}{if} (paraules[aux] == word)
+179                 aux++;
+180             \textcolor{keywordflow}{else}
+181                 aux = 0;
+182         \}
+183         \textcolor{keywordflow}{if} (aux == m)
+184             cout << i+1 << \textcolor{stringliteral}{" "} << linies[i] << endl;
+185     \}
+186 \}
+\end{DoxyCode}
+
+
+La documentació d'aquesta classe es va generar a partir dels següents fitxers\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_text_8hh}{Text.\+hh}\item 
+\hyperlink{_text_8cc}{Text.\+cc}\end{DoxyCompactItemize}

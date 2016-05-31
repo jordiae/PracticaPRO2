@@ -1,0 +1,395 @@
+\hypertarget{class_cites}{\section{Referència de la Classe Cites}
+\label{class_cites}\index{Cites@{Cites}}
+}
+
+
+Gestionador de cites.  
+
+
+\subsection*{Mètodes públics}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cites_aef7c40360c5537b4dac136a758e815fc}{Cites} ()
+\begin{DoxyCompactList}\small\item\em Invariant de la representació\+: \end{DoxyCompactList}\item 
+\hyperlink{class_cites_a7cbea31abf7bb3aeaae56592545c2390}{$\sim$\+Cites} ()
+\begin{DoxyCompactList}\small\item\em Constructora de la classe. \end{DoxyCompactList}\item 
+void \hyperlink{class_cites_a66ce36e7002b77e08ab58c865c6538dd}{afegir\+\_\+cita} (int frase\+\_\+inicial, int frase\+\_\+final, vector$<$ string $>$ frases, string nom\+\_\+autor, string titol\+\_\+text)
+\item 
+void \hyperlink{class_cites_a001083c304cb7d6305bde75dd4cb28fe}{eliminar\+\_\+cita} (string referencia)
+\begin{DoxyCompactList}\small\item\em Mètode per afegir una cita. \end{DoxyCompactList}\item 
+void \hyperlink{class_cites_af2f27446487bb2763199cf35e45bc9b3}{imprimir\+\_\+cita} (string referencia)
+\begin{DoxyCompactList}\small\item\em Mètode per consultar les inicials d'un autor. \end{DoxyCompactList}\item 
+void \hyperlink{class_cites_a780d46001297c44f21f0acc827ffe651}{imprimir\+\_\+cites\+\_\+autor} (string nom\+\_\+autor)
+\begin{DoxyCompactList}\small\item\em Mètode per imprimir una cita. \end{DoxyCompactList}\item 
+void \hyperlink{class_cites_a3491d06f3db170f20a719fd05c132200}{imprimir\+\_\+cites\+\_\+text} (string titol\+\_\+text)
+\begin{DoxyCompactList}\small\item\em Mètode per imprimir les cites d'un autor. \end{DoxyCompactList}\item 
+void \hyperlink{class_cites_ac6bfa4ddde0539469b662515b61212bc}{imprimir\+\_\+cites\+\_\+associades} (string titol\+\_\+text)
+\begin{DoxyCompactList}\small\item\em Mètode per imprimir les cites d'un text. \end{DoxyCompactList}\item 
+void \hyperlink{class_cites_afaa3bf8137743be02fa0dea30b7cd9bb}{imprimir\+\_\+totes\+\_\+cites} ()
+\begin{DoxyCompactList}\small\item\em Mètode per imprimir cites associades. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Mètodes Públics Estàtics}
+\begin{DoxyCompactItemize}
+\item 
+static string \hyperlink{class_cites_aef796d574e43afc5830b8825e711f50f}{inicials\+\_\+autor} (string autor)
+\begin{DoxyCompactList}\small\item\em Mètode per eliminar una cita. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripció Detallada}
+Gestionador de cites. 
+
+Definició a la línia 18 del fitxer Cites.\+hh.
+
+
+
+\subsection{Documentació del Constructor i el Destructor}
+\hypertarget{class_cites_aef7c40360c5537b4dac136a758e815fc}{\index{Cites@{Cites}!Cites@{Cites}}
+\index{Cites@{Cites}!Cites@{Cites}}
+\subsubsection[{Cites}]{\setlength{\rightskip}{0pt plus 5cm}Cites\+::\+Cites (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_cites_aef7c40360c5537b4dac136a758e815fc}
+
+
+Invariant de la representació\+: 
+
+
+\begin{DoxyItemize}
+\item cites és un diccionari que conté la referència completa (inicials de l'autor + índex) de cada cita i la pròpia cita. Les referències no es poden repetir i l'índex començarà a 1
+\item referencies és un diccionari que utilitza les inicials del autor de la cita referenciada amb un comptador com a objecte que compta el nombre de vegades que han aparegut aquestes inicials des de l'inici del programa 
+\end{DoxyItemize}
+
+Definició a la línia 3 del fitxer Cites.\+cc.
+
+
+\begin{DoxyCode}
+3 \{\}
+\end{DoxyCode}
+\hypertarget{class_cites_a7cbea31abf7bb3aeaae56592545c2390}{\index{Cites@{Cites}!````~Cites@{$\sim$\+Cites}}
+\index{````~Cites@{$\sim$\+Cites}!Cites@{Cites}}
+\subsubsection[{$\sim$\+Cites}]{\setlength{\rightskip}{0pt plus 5cm}Cites\+::$\sim$\+Cites (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_cites_a7cbea31abf7bb3aeaae56592545c2390}
+
+
+Constructora de la classe. 
+
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+El resultat és un gestionador de cites 
+\end{DoxyPostcond}
+
+
+Definició a la línia 120 del fitxer Cites.\+cc.
+
+
+\begin{DoxyCode}
+120 \{\}\end{DoxyCode}
+
+
+\subsection{Documentació de les Funcions Membre}
+\hypertarget{class_cites_a66ce36e7002b77e08ab58c865c6538dd}{\index{Cites@{Cites}!afegir\+\_\+cita@{afegir\+\_\+cita}}
+\index{afegir\+\_\+cita@{afegir\+\_\+cita}!Cites@{Cites}}
+\subsubsection[{afegir\+\_\+cita}]{\setlength{\rightskip}{0pt plus 5cm}void Cites\+::afegir\+\_\+cita (
+\begin{DoxyParamCaption}
+\item[{int}]{frase\+\_\+inicial, }
+\item[{int}]{frase\+\_\+final, }
+\item[{vector$<$ string $>$}]{frases, }
+\item[{string}]{nom\+\_\+autor, }
+\item[{string}]{titol\+\_\+text}
+\end{DoxyParamCaption}
+)}}\label{class_cites_a66ce36e7002b77e08ab58c865c6538dd}
+
+
+Definició a la línia 5 del fitxer Cites.\+cc.
+
+
+\begin{DoxyCode}
+5                                                                                                            
+                 \{
+6     cita c;
+7     c.autor = nom\_autor;
+8     c.titol\_text = titol\_text;
+9     c.frase\_inicial = frase\_inicial;
+10     c.frase\_final = frase\_final;
+11     c.frases = frases;
+12     \textcolor{keywordtype}{string} referencia = \hyperlink{class_cites_aef796d574e43afc5830b8825e711f50f}{Cites::inicials\_autor}(nom\_autor);
+13     map<string, int>::iterator i = referencies.find(referencia);
+14     \textcolor{keywordflow}{if} (i == referencies.end()) \{
+15         referencies.insert(make\_pair(referencia,1));
+16         cites.insert(make\_pair(referencia+\textcolor{charliteral}{'1'},c));
+17     \}
+18     \textcolor{keywordflow}{else} \{
+19         \textcolor{keywordtype}{bool} error = \textcolor{keyword}{false};
+20         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} n = 0; n < (*i).second+1; n++) \{
+21             stringstream nref;
+22             nref << n;
+23             \textcolor{keywordtype}{string} aux = referencia + nref.str();
+24             map<string, cita>::iterator it = cites.find(aux);
+25             \textcolor{keywordflow}{if} (it != cites.end() && ((*it).second.titol\_text == titol\_text and (*it).second.frase\_inicial 
+      == frase\_inicial and (*it).second.frase\_final == frase\_final))\{
+26                 cout << \textcolor{stringliteral}{"error"} << endl;
+27                 n = (*i).second+1;
+28                 error = \textcolor{keyword}{true};
+29             \}
+30         \}
+31         \textcolor{keywordflow}{if} (not error)\{
+32             (*i).second++;
+33             stringstream nref;
+34             nref << (*i).second;
+35             referencia += nref.str();
+36             cites.insert(make\_pair(referencia,c));
+37         \}
+38     \}
+39 \}
+\end{DoxyCode}
+\hypertarget{class_cites_a001083c304cb7d6305bde75dd4cb28fe}{\index{Cites@{Cites}!eliminar\+\_\+cita@{eliminar\+\_\+cita}}
+\index{eliminar\+\_\+cita@{eliminar\+\_\+cita}!Cites@{Cites}}
+\subsubsection[{eliminar\+\_\+cita}]{\setlength{\rightskip}{0pt plus 5cm}void Cites\+::eliminar\+\_\+cita (
+\begin{DoxyParamCaption}
+\item[{string}]{referencia}
+\end{DoxyParamCaption}
+)}}\label{class_cites_a001083c304cb7d6305bde75dd4cb28fe}
+
+
+Mètode per afegir una cita. 
+
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+S'ha afegit una cita amb les dades passades pels paràmetres al paràmetre implícit 
+\end{DoxyPostcond}
+
+
+Definició a la línia 41 del fitxer Cites.\+cc.
+
+
+\begin{DoxyCode}
+41                                            \{
+42     map<string, cita>::iterator it = cites.find(referencia);
+43     \textcolor{keywordflow}{if} (it == cites.end())
+44         cout << \textcolor{stringliteral}{"error"} << endl;
+45     \textcolor{keywordflow}{else}
+46         cites.erase(it);
+47 \}
+\end{DoxyCode}
+\hypertarget{class_cites_aef796d574e43afc5830b8825e711f50f}{\index{Cites@{Cites}!inicials\+\_\+autor@{inicials\+\_\+autor}}
+\index{inicials\+\_\+autor@{inicials\+\_\+autor}!Cites@{Cites}}
+\subsubsection[{inicials\+\_\+autor}]{\setlength{\rightskip}{0pt plus 5cm}string Cites\+::inicials\+\_\+autor (
+\begin{DoxyParamCaption}
+\item[{string}]{autor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_cites_aef796d574e43afc5830b8825e711f50f}
+
+
+Mètode per eliminar una cita. 
+
+\begin{DoxyPrecond}{Precondició}
+Referencia és la referència vàlida d'una cita existent 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+S'ha eliminat la cita amb referència referencia 
+\end{DoxyPostcond}
+
+
+Definició a la línia 110 del fitxer Cites.\+cc.
+
+
+\begin{DoxyCode}
+110                                         \{
+111     stringstream ss;
+112     ss << autor;
+113     \textcolor{keywordtype}{string} word;
+114     \textcolor{keywordtype}{string} inicials;
+115     \textcolor{keywordflow}{while} (ss >> word)
+116         inicials += word[0];
+117     \textcolor{keywordflow}{return} inicials;
+118 \}
+\end{DoxyCode}
+\hypertarget{class_cites_af2f27446487bb2763199cf35e45bc9b3}{\index{Cites@{Cites}!imprimir\+\_\+cita@{imprimir\+\_\+cita}}
+\index{imprimir\+\_\+cita@{imprimir\+\_\+cita}!Cites@{Cites}}
+\subsubsection[{imprimir\+\_\+cita}]{\setlength{\rightskip}{0pt plus 5cm}void Cites\+::imprimir\+\_\+cita (
+\begin{DoxyParamCaption}
+\item[{string}]{referencia}
+\end{DoxyParamCaption}
+)}}\label{class_cites_af2f27446487bb2763199cf35e45bc9b3}
+
+
+Mètode per consultar les inicials d'un autor. 
+
+\begin{DoxyPrecond}{Precondició}
+autor = nom de l'autor 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Es retornen les inicials de l'autor 
+\end{DoxyPostcond}
+
+
+Definició a la línia 49 del fitxer Cites.\+cc.
+
+
+\begin{DoxyCode}
+49                                            \{
+50   map<string, cita>::const\_iterator i = cites.find(referencia);
+51   \textcolor{keywordflow}{if} (i == cites.end())
+52         cout << \textcolor{stringliteral}{"error"} << endl;
+53     \textcolor{keywordflow}{else} \{
+54         cout << (*i).second.autor << \textcolor{stringliteral}{" \(\backslash\)""} << (*i).second.titol\_text << \textcolor{stringliteral}{"\(\backslash\)""} << endl;
+55         cout << (*i).second.frase\_inicial << \textcolor{stringliteral}{"-"} << (*i).second.frase\_final << endl;
+56         \textcolor{keywordtype}{int} n = (*i).second.frases.size();
+57         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k = 0; k < n; k++)
+58             cout << (*i).second.frase\_inicial + k << \textcolor{stringliteral}{" "} << (*i).second.frases[k] << endl;
+59     \}
+60 \}
+\end{DoxyCode}
+\hypertarget{class_cites_a780d46001297c44f21f0acc827ffe651}{\index{Cites@{Cites}!imprimir\+\_\+cites\+\_\+autor@{imprimir\+\_\+cites\+\_\+autor}}
+\index{imprimir\+\_\+cites\+\_\+autor@{imprimir\+\_\+cites\+\_\+autor}!Cites@{Cites}}
+\subsubsection[{imprimir\+\_\+cites\+\_\+autor}]{\setlength{\rightskip}{0pt plus 5cm}void Cites\+::imprimir\+\_\+cites\+\_\+autor (
+\begin{DoxyParamCaption}
+\item[{string}]{nom\+\_\+autor}
+\end{DoxyParamCaption}
+)}}\label{class_cites_a780d46001297c44f21f0acc827ffe651}
+
+
+Mètode per imprimir una cita. 
+
+\begin{DoxyPrecond}{Precondició}
+referencia és la referència vàlida d'una cita existent 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+S'ha imprès la cita amb referència referencia al canal estàndard de sortida 
+\end{DoxyPostcond}
+
+
+Definició a la línia 73 del fitxer Cites.\+cc.
+
+
+\begin{DoxyCode}
+73                                                  \{
+74   \textcolor{keywordflow}{for} (map<string, cita>::const\_iterator i = cites.begin(); i != cites.end(); i++) \{
+75     \textcolor{keywordflow}{if} ((*i).second.autor == nom\_autor) \{
+76       cout << (*i).first << endl;
+77       \textcolor{keywordtype}{int} n = (*i).second.frases.size();
+78             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k = 0; k < n; k++)
+79                 cout << (*i).second.frase\_inicial + k << \textcolor{stringliteral}{" "} << (*i).second.frases[k] << endl;
+80       cout << \textcolor{stringliteral}{"\(\backslash\)""} << (*i).second.titol\_text << \textcolor{stringliteral}{"\(\backslash\)""} << endl;
+81     \}
+82   \}
+83 \}
+\end{DoxyCode}
+\hypertarget{class_cites_a3491d06f3db170f20a719fd05c132200}{\index{Cites@{Cites}!imprimir\+\_\+cites\+\_\+text@{imprimir\+\_\+cites\+\_\+text}}
+\index{imprimir\+\_\+cites\+\_\+text@{imprimir\+\_\+cites\+\_\+text}!Cites@{Cites}}
+\subsubsection[{imprimir\+\_\+cites\+\_\+text}]{\setlength{\rightskip}{0pt plus 5cm}void Cites\+::imprimir\+\_\+cites\+\_\+text (
+\begin{DoxyParamCaption}
+\item[{string}]{titol\+\_\+text}
+\end{DoxyParamCaption}
+)}}\label{class_cites_a3491d06f3db170f20a719fd05c132200}
+
+
+Mètode per imprimir les cites d'un autor. 
+
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+s'han imprès totes les cites de l'autor amb nom nom\+\_\+autor, si existeix 
+\end{DoxyPostcond}
+
+
+Definició a la línia 85 del fitxer Cites.\+cc.
+
+
+\begin{DoxyCode}
+85                                                  \{
+86     map<string, cita>::iterator i = cites.begin();
+87     \textcolor{keywordflow}{while} (i != cites.end()) \{
+88     \textcolor{keywordflow}{if} ((*i).second.titol\_text == titol\_text) \{
+89             cout << (*i).first << endl;
+90       \textcolor{keywordtype}{int} n = (*i).second.frases.size();
+91       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k = 0; k < n; k++)
+92           cout << (*i).second.frase\_inicial +k << \textcolor{stringliteral}{" "} << (*i).second.frases[k] << endl;
+93             cout << (*i).second.autor << \textcolor{stringliteral}{" \(\backslash\)""} << (*i).second.titol\_text << \textcolor{stringliteral}{"\(\backslash\)""} << endl;
+94     \}
+95     i++;
+96   \}
+97 \}
+\end{DoxyCode}
+\hypertarget{class_cites_ac6bfa4ddde0539469b662515b61212bc}{\index{Cites@{Cites}!imprimir\+\_\+cites\+\_\+associades@{imprimir\+\_\+cites\+\_\+associades}}
+\index{imprimir\+\_\+cites\+\_\+associades@{imprimir\+\_\+cites\+\_\+associades}!Cites@{Cites}}
+\subsubsection[{imprimir\+\_\+cites\+\_\+associades}]{\setlength{\rightskip}{0pt plus 5cm}void Cites\+::imprimir\+\_\+cites\+\_\+associades (
+\begin{DoxyParamCaption}
+\item[{string}]{titol\+\_\+text}
+\end{DoxyParamCaption}
+)}}\label{class_cites_ac6bfa4ddde0539469b662515b61212bc}
+
+
+Mètode per imprimir les cites d'un text. 
+
+\begin{DoxyPrecond}{Precondició}
+titol\+\_\+text és el títol d'un text 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+S'han imprès totes les cites del text amb títol titol\+\_\+text 
+\end{DoxyPostcond}
+
+
+Definició a la línia 62 del fitxer Cites.\+cc.
+
+
+\begin{DoxyCode}
+62                                                        \{
+63   \textcolor{keywordflow}{for} (map<string, cita>::const\_iterator i = cites.begin(); i != cites.end(); i++) \{
+64     \textcolor{keywordflow}{if} ((*i).second.titol\_text == titol\_text) \{
+65             cout << (*i).first << endl;
+66       \textcolor{keywordtype}{int} n = (*i).second.frases.size();
+67       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k = 0; k < n; k++)
+68           cout << (*i).second.frase\_inicial +k << \textcolor{stringliteral}{" "} << (*i).second.frases[k] << endl;;
+69     \}
+70   \}
+71 \}
+\end{DoxyCode}
+\hypertarget{class_cites_afaa3bf8137743be02fa0dea30b7cd9bb}{\index{Cites@{Cites}!imprimir\+\_\+totes\+\_\+cites@{imprimir\+\_\+totes\+\_\+cites}}
+\index{imprimir\+\_\+totes\+\_\+cites@{imprimir\+\_\+totes\+\_\+cites}!Cites@{Cites}}
+\subsubsection[{imprimir\+\_\+totes\+\_\+cites}]{\setlength{\rightskip}{0pt plus 5cm}void Cites\+::imprimir\+\_\+totes\+\_\+cites (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_cites_afaa3bf8137743be02fa0dea30b7cd9bb}
+
+
+Mètode per imprimir cites associades. 
+
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+S'han imprès totes les cites del text amb títol titol\+\_\+text sense el nom de l'autor o el titol del text al final 
+\end{DoxyPostcond}
+
+
+Definició a la línia 99 del fitxer Cites.\+cc.
+
+
+\begin{DoxyCode}
+99                                  \{
+100     map<string, cita>::iterator it = cites.begin();
+101     \textcolor{keywordflow}{while} (it != cites.end()) \{
+102     cout << (*it).first << endl;
+103     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < (*it).second.frases.size(); i++)
+104             cout << (*it).second.frase\_inicial + i << \textcolor{stringliteral}{" "} << (*it).second.frases[i] << endl;
+105         cout << (*it).second.autor << \textcolor{stringliteral}{" \(\backslash\)""} << (*it).second.titol\_text << \textcolor{stringliteral}{"\(\backslash\)""} << endl;
+106         it++;
+107    \}
+108 \}
+\end{DoxyCode}
+
+
+La documentació d'aquesta classe es va generar a partir dels següents fitxers\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_cites_8hh}{Cites.\+hh}\item 
+\hyperlink{_cites_8cc}{Cites.\+cc}\end{DoxyCompactItemize}

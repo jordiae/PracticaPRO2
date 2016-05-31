@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['imprimeix_5fautor_5ftext',['imprimeix_autor_text',['../class_cjt__autors.html#a583a23dac0ab39f588aae1df306b7dc3',1,'Cjt_autors']]],
+  ['imprimeix_5fcites_5fautor',['imprimeix_cites_autor',['../class_cjt__autors.html#ae515dc988d61c3cc44235d72dc6e8482',1,'Cjt_autors']]],
+  ['imprimeix_5fcites_5ftext',['imprimeix_cites_text',['../class_cjt__autors.html#ab9e4765e7eb501e346eee78fc57d05ea',1,'Cjt_autors']]],
+  ['imprimeix_5fcontingut_5ftext',['imprimeix_contingut_text',['../class_cjt__autors.html#a56fbd0fb78bf29adc6525c9d2a6ae117',1,'Cjt_autors']]],
+  ['imprimeix_5ffrases_5fparaules',['imprimeix_frases_paraules',['../class_text.html#ae9b60cdfa763651d4093bf897383e5d7',1,'Text']]],
+  ['imprimeix_5finfo',['imprimeix_info',['../class_cjt__autors.html#ac98f1a4d2ec3a115ac089ca33c7a6f9c',1,'Cjt_autors']]],
+  ['imprimeix_5finfo_5fcita',['imprimeix_info_cita',['../class_cjt__autors.html#a84d76f9c9487d5f36c10a6a5b3739de3',1,'Cjt_autors']]],
+  ['imprimeix_5flinies',['imprimeix_linies',['../class_text.html#a9a686e90e9f8f8b2f8b53beaf097af78',1,'Text']]],
+  ['imprimeix_5fnombre_5ffrases',['imprimeix_nombre_frases',['../class_cjt__autors.html#ad6a8a06f8a706808a133d0c11c579656',1,'Cjt_autors::imprimeix_nombre_frases()'],['../class_text.html#ad91853d8dc6df6e97a16f7180c49eda3',1,'Text::imprimeix_nombre_frases()']]],
+  ['imprimeix_5fnombre_5fparaules',['imprimeix_nombre_paraules',['../class_cjt__autors.html#a63c6fd83a2ce3a2bd150237fe9619f8c',1,'Cjt_autors::imprimeix_nombre_paraules()'],['../class_text.html#a3da13d29c07e07416ac49384e43e0e9d',1,'Text::imprimeix_nombre_paraules()']]],
+  ['imprimeix_5ftaula_5ffrequencies',['imprimeix_taula_frequencies',['../class_cjt__autors.html#a90b657e80e6cb212a7cbf0f8c05e69d0',1,'Cjt_autors::imprimeix_taula_frequencies()'],['../class_text.html#a8ddf3381946d6eebe4a90c8fb0d437d5',1,'Text::imprimeix_taula_frequencies()']]],
+  ['imprimeix_5ftotes_5fcites',['imprimeix_totes_cites',['../class_cjt__autors.html#a388318c22b9aef045e8f6646cfc3b638',1,'Cjt_autors']]],
+  ['imprimeix_5ftots_5fautors',['imprimeix_tots_autors',['../class_cjt__autors.html#a29ee6a7cf456ab121e154b68b0e5ec4c',1,'Cjt_autors']]],
+  ['imprimeix_5ftots_5ftextos',['imprimeix_tots_textos',['../class_cjt__autors.html#a408618804b43301a240b75a9592c77d0',1,'Cjt_autors']]],
+  ['imprimeix_5ftots_5ftextos_5fautor',['imprimeix_tots_textos_autor',['../class_cjt__autors.html#ae89d39d6a6ba754a3f2442de2b7a56db',1,'Cjt_autors']]],
+  ['imprimir_5fcita',['imprimir_cita',['../class_cites.html#af2f27446487bb2763199cf35e45bc9b3',1,'Cites']]],
+  ['imprimir_5fcites_5fassociades',['imprimir_cites_associades',['../class_cites.html#ac6bfa4ddde0539469b662515b61212bc',1,'Cites']]],
+  ['imprimir_5fcites_5fautor',['imprimir_cites_autor',['../class_cites.html#a780d46001297c44f21f0acc827ffe651',1,'Cites']]],
+  ['imprimir_5fcites_5ftext',['imprimir_cites_text',['../class_cites.html#a3491d06f3db170f20a719fd05c132200',1,'Cites']]],
+  ['imprimir_5ftotes_5fcites',['imprimir_totes_cites',['../class_cites.html#afaa3bf8137743be02fa0dea30b7cd9bb',1,'Cites']]],
+  ['inicials_5fautor',['inicials_autor',['../class_cites.html#aef796d574e43afc5830b8825e711f50f',1,'Cites']]]
+];

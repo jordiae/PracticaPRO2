@@ -1,0 +1,44 @@
+\hypertarget{program_8cc}{\section{Referència del Fitxer program.\+cc}
+\label{program_8cc}\index{program.\+cc@{program.\+cc}}
+}
+Inclou el graf de dependències per a program.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{program_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Funcions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentació de les Funcions}
+\hypertarget{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{\index{program.\+cc@{program.\+cc}!main@{main}}
+\index{main@{main}!program.\+cc@{program.\+cc}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+Definició a la línia 5 del fitxer program.\+cc.
+
+
+\begin{DoxyCode}
+5            \{
+6     \hyperlink{class_cjt__autors}{Cjt\_autors} cjt\_autors;
+7     \textcolor{keywordtype}{string} s;
+8     \textcolor{keywordflow}{while} (getline(cin, s) && s != \textcolor{stringliteral}{"sortir"})\{
+9         \textcolor{keywordflow}{if}(s[0] != \textcolor{charliteral}{'\(\backslash\)n'} and s[0] != \textcolor{charliteral}{'\(\backslash\)r'} and s.size() != 0)\{
+10             cjt\_autors.\hyperlink{class_cjt__autors_a0fb9864fd22881216650552d0697e52d}{comanda}(s);
+11             cout << endl;
+12         \}
+13     \}
+14     \textcolor{keywordflow}{return} 0;
+15 \}
+\end{DoxyCode}

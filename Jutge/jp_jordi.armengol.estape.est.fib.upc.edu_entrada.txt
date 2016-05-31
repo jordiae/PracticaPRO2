@@ -1,0 +1,32 @@
+afegir text "Lorem Ipsum"
+autor "Jordi"
+Lorem ipsum dolor sit amet, amet nulla vestibulum nec velit ac orci. Urna nunc lobortis, amet habitant natoque nullam, morbi vel maecenas odio, primis elit, orci facilisis urna. Curae libero nulla ipsum aliquet, convallis nec, nullam vestibulum tellus molestie, platea nisl sed pellentesque molestie faucibus etiam, eu dignissim erat vitae neque vitae quis. Quis turpis elementum, in cum nibh facilisis scelerisque nulla rutrum, adipiscing quis at nonummy vivamus. Cillum integer adipiscing class. Class mauris a hymenaeos a. Ullamcorper massa maecenas eu, amet velit ante lectus tempus tempor. Rerum magna cum, scelerisque ultricies montes duis fusce ac, neque turpis euismod, at felis cras non tristique, sit non at sapien sit nullam.
+****
+
+triar text {Lorem Ipsum}
+
+autor ?
+
+contingut ?
+
+frases "vivamus" ?
+
+frases 4 6 ?
+
+frases (({lectus} & {dolor}) | {magna}) ?
+
+taula de frequencies ?
+
+substituir "ipsum" per "ipsum"
+
+taula de frequencies ?
+
+substituir "tellus" per "Hola"
+
+taula de frequencies ?
+
+afegir cita 1 3
+
+totes cites ?
+
+sortir
